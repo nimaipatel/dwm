@@ -1,0 +1,56 @@
+#!/usr/bin/env sh
+
+usage() {
+	cat <<EOF
+dwm window swallowing command-line interface. Usage:
+
+  $(printf "\033[1m")dwmswallow $(printf "\033[3m")SWALLOWER SWALLOWEE$(printf "\033[0m")
+    Perform immediate swallow of window $(printf "\033[3m")SWALLOWEE$(printf "\033[0m") by window $(printf "\033[3m")SWALLOWER$(printf "\033[0m").
+
+  $(printf "\033[1m")dwmswallow $(printf "\033[3m")SWALLOWER [-c CLASS] [-i INSTANCE] [-t TITLE]$(printf "\033[0m")
+    Queue window $(printf "\033[3m")SWALLOWER$(printf "\033[0m") to swallow the next about-to-be-mapped window whose
+    attributes match the $(printf "\033[3m")CLASS$(printf "\033[0m") name, $(printf "\033[3m")INSTANCE$(printf "\033[0m") name and window $(printf "\033[3m")TITLE$(printf "\033[0m") filters
+    using basic string-matching. An omitted filter will match anything.
+
+  $(printf "\033[1m")dwmswallow -h$(printf "\033[0m")
+  $(printf "\033[1m")dwmswallow --help$(printf "\033[0m")
+    Show this usage information.
+EOF
+}
+
+SEP='###' # As defined in dwm.c:fakesignal()
+PREFIX='#!'
+
+if [ $# -eq 0 ] || [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+	usage
+elif [ $# -eq 2 ]; then
+	widswer="$1"
+	widswee="$2"
+	if name="$(printf "${PREFIX}swal${SEP}%u${SEP}%u" "$widswer" "$widswee")"; then
+		xsetroot -name "$name"
+	else
+		usage >&2
+		exit 1
+	fi
+else
+	widswer="$1"
+	ii=2
+	while [ $ii -le $# ]; do
+		eval "arg=\$$ii"
+		eval "val=\$$((ii + 1))"
+		case "$arg" in
+		-c) class="$val" ;;
+		-i) instance="$val" ;;
+		-t) title="$val" ;;
+		*) usage >&2; exit 1 ;;
+		esac
+		ii=$((ii + 2))
+	done
+
+	if name="$(printf "${PREFIX}swaladdpool${SEP}%u${SEP}%s${SEP}%s${SEP}%s" "$widswer" "$class" "$instance" "$title")"; then
+		xsetroot -name "$name"
+	else
+		usage >&2
+		exit 1
+	fi
+fi

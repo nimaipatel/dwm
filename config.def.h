@@ -34,6 +34,11 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
+/* window swallowing */
+static const int swaldecay = 3;
+static const int swalretroactive = 1;
+static const char swalsymbol[] = "👅";
+
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
@@ -69,6 +74,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,                          setgaps,               {.i = -1 } },
 	{ MODKEY,                       XK_equal,                          setgaps,               {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,                          setgaps,               {.i = 0  } },
+	{ MODKEY,                       XK_x,                              swalstopsel,           {0} },
 	{ MODKEY,                       XK_j,                              focusstack,            {.i = +1 } },
 	{ MODKEY,                       XK_k,                              focusstack,            {.i = -1 } },
 	{ MODKEY,                       XK_o,                              incnmaster,            {.i = +1 } },
@@ -136,6 +142,7 @@ static Button buttons[] = {
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
+	{ ClkClientWin,         MODKEY|ShiftMask, Button1,      swalmouse,      {0} },
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
