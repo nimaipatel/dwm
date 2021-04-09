@@ -24,17 +24,31 @@ static char *colors[][3] = {
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
 };
 
+typedef struct {
+	const char *name;
+	const void *cmd;
+} Sp;
+const char *spcmd1[] = { "st", "-n", "ncmpcpp", "-e", "ncmpcpp", NULL };
+const char *spcmd2[] = { "st", "-n", "scratch", NULL };
+static Sp scratchpads[] = {
+	/* name          cmd  */
+	{"ncmpcpp",      spcmd1},
+	{"scratch",      spcmd2},
+};
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class      instance    title                     tags mask     isfloating   monitor */
+	{ "st",       NULL,       "wifi-menu floating",       0,            0,           -1 },
+	{ "Gimp",     NULL,       NULL,                       0,            1,           -1 },
+	{ "Firefox",  NULL,       NULL,                       1 << 8,       0,           -1 },
+	{ NULL,		  "ncmpcpp",  NULL,		                  SPTAG(0),		0,			 -1 },
+	{ NULL,		  "scratch",  NULL,		                  SPTAG(1),		0,			 -1 },
 };
 
 /* window swallowing */
@@ -100,6 +114,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,                          setgaps,               {.i = 0  } },
 	{ MODKEY,                       XK_x,                              swalstopsel,           {0} },
 	{ MODKEY,                       XK_F12,                            xrdb,                  {.v = NULL } },
+	{ MODKEY,                       XK_n,                              togglescratch,         {.ui = 0 } },
+	{ MODKEY,                       XK_slash,                          togglescratch,         {.ui = 1 } },
 	{ MODKEY,                       XK_j,                              focusstack,            {.i = +1 } },
 	{ MODKEY,                       XK_k,                              focusstack,            {.i = -1 } },
 	{ MODKEY,                       XK_o,                              incnmaster,            {.i = +1 } },
