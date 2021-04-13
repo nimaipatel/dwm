@@ -144,6 +144,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_w,                              spawn,                 SHCMD("dmenu-wallpaper") },
 	{ MODKEY,                       XK_y,                              spawn,                 SHCMD("launch-tmux-dmenu") },
 	{ MODKEY,                       XK_e,                              spawn,                 SHCMD("dmenu-change-mode") },
+	{ MODKEY|ShiftMask,             XK_e,                              spawn,                 SHCMD("dmenu-change-font") },
 	{ MODKEY,                       XK_F2,                             spawn,                 SHCMD("$BROWSER") },
 	{ MODKEY,                       XK_F3,                             spawn,                 SHCMD("$TERMINAL -e $TERMINAL_FILE_BROWSER") },
 	{ MODKEY,                       XK_F4,                             spawn,                 SHCMD("$GUI_FILE_BROWSER") },
