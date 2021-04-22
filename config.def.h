@@ -11,7 +11,7 @@ static const int focusonwheel       = 0;
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static char font[]            = "monospace:size=11";
 static char dmenufont[]       = "monospace:size=10";
-static const char *fonts[]          = { font, "joypixels:size=11" };
+static const char *fonts[]          = { font, "joypixels:size=11", "Symbols Nerd Font:size=11",  };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
