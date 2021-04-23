@@ -148,7 +148,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F2,                             spawn,                 SHCMD("$BROWSER") },
 	{ MODKEY,                       XK_F3,                             spawn,                 SHCMD("$TERMINAL -e $TERMINAL_FILE_BROWSER") },
 	{ MODKEY,                       XK_F4,                             spawn,                 SHCMD("$GUI_FILE_BROWSER") },
-	{ MODKEY,                       XK_w,                              spawn,                 SHCMD("$TERMINAL -T 'wifi-menu floating' -e sudo wifi-menu") },
+	{ MODKEY,                       XK_w,                              spawn,                 SHCMD("dmenu-wifi") },
 	{ MODKEY,                       XK_q,                              spawn,                 SHCMD("lockscreen") },
 	{ MODKEY|ShiftMask,             XK_p,                              spawn,                 SHCMD("killall picom || picom") },
 	{ MODKEY|ShiftMask,             XK_x,                              spawn,                 SHCMD("dmenu-sys-options") },
