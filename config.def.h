@@ -43,12 +43,11 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title                     tags mask     isfloating   monitor */
-	{ "st",       NULL,       "wifi-menu floating",       0,            0,           -1 },
-	{ "Gimp",     NULL,       NULL,                       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,                       1 << 8,       0,           -1 },
-	{ NULL,		  "ncmpcpp",  NULL,		                  SPTAG(0),		0,			 -1 },
-	{ NULL,		  "scratch",  NULL,		                  SPTAG(1),		0,			 -1 },
+	/* class      instance      title    tags mask     isfloating   monitor */
+	{ "st",         NULL,         "fzf",     0,            1,           -1 },
+	{ "Gimp",       NULL,         NULL,      0,            1,           -1 },
+	{ NULL,         "ncmpcpp",    NULL,      SPTAG(0),     1,           -1 },
+	{ NULL,         "scratch",    NULL,      SPTAG(1),     1,           -1 },
 };
 
 /* window swallowing */
