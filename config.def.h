@@ -44,7 +44,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance      title    tags mask     isfloating   monitor */
-	{ "st",         NULL,         "fzf",     0,            1,           -1 },
 	{ "Gimp",       NULL,         NULL,      0,            1,           -1 },
 	{ NULL,         "ncmpcpp",    NULL,      SPTAG(0),     1,           -1 },
 	{ NULL,         "scratch",    NULL,      SPTAG(1),     1,           -1 },
