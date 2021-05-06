@@ -154,12 +154,17 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Print,                          spawn,                 SHCMD("flameshot full --path $HOME/Pictures/Screenshots") },
 	{ 0,                            XF86XK_MonBrightnessUp,            spawn,                 SHCMD("brightnessctl set +2%") },
 	{ 0,                            XF86XK_MonBrightnessDown,          spawn,                 SHCMD("brightnessctl set 2%-") },
+	{ MODKEY|ShiftMask,             XK_k,                              spawn,                 SHCMD("brightnessctl set +2%") },
+	{ MODKEY|ShiftMask,             XK_j,                              spawn,                 SHCMD("brightnessctl set 2%-") },
 	{ 0,                            XF86XK_AudioMute,                  spawn,                 SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ 0,                            XF86XK_AudioRaiseVolume,           spawn,                 SHCMD("pamixer --allow-boost -i 1; kill -44 $(pidof dwmblocks)") },
 	{ 0,                            XF86XK_AudioLowerVolume,           spawn,                 SHCMD("pamixer --allow-boost -d 1; kill -44 $(pidof dwmblocks)") },
 	{ 0,                            XF86XK_AudioPrev,                  spawn,                 SHCMD("mpc prev") },
 	{ 0,                            XF86XK_AudioNext,                  spawn,                 SHCMD("mpc next") },
 	{ 0,                            XF86XK_AudioPlay,                  spawn,                 SHCMD("mpc toggle") },
+	{ MODKEY|ControlMask,           XK_space,                          spawn,                 SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ControlMask,           XK_k,                              spawn,                 SHCMD("pamixer --allow-boost -i 1; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ControlMask,           XK_j,                              spawn,                 SHCMD("pamixer --allow-boost -d 1; kill -44 $(pidof dwmblocks)") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
