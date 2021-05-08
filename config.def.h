@@ -151,7 +151,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_p,                              spawn,                 SHCMD("killall picom || picom") },
 	{ MODKEY|ShiftMask,             XK_x,                              spawn,                 SHCMD("dmenu-sys-options") },
 	{ 0,                            XK_Print,                          spawn,                 SHCMD("flameshot gui") },
-	{ MODKEY,                       XK_Print,                          spawn,                 SHCMD("flameshot full --path $HOME/Pictures/Screenshots") },
+	{ MODKEY,                       XK_Print,                          spawn,                 SHCMD("flameshot full --path $HOME/pictures/screenshots") },
 	{ 0,                            XF86XK_MonBrightnessUp,            spawn,                 SHCMD("brightnessctl set +2%") },
 	{ 0,                            XF86XK_MonBrightnessDown,          spawn,                 SHCMD("brightnessctl set 2%-") },
 	{ MODKEY|ShiftMask,             XK_k,                              spawn,                 SHCMD("brightnessctl set +2%") },
