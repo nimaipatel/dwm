@@ -2718,6 +2718,8 @@ xrdb(const Arg *arg)
 	int i;
 	for (i = 0; i < LENGTH(colors); i++)
 	scheme[i] = drw_scm_create(drw, colors[i], 3);
+	if(!drw_fontset_create(drw, fonts, LENGTH(fonts)))
+		die("no fonts could be loaded.");
 	focus(NULL);
 	arrange(NULL);
 }
