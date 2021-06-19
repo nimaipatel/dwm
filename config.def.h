@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
 static const int user_bh            = 20;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int focusonwheel       = 0;
 static const int viewontag         = 1;     /* Switch view on tag switch */
@@ -134,8 +134,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period,                         focusmon,              {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,                          tagmon,                {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,                         tagmon,                {.i = +1 } },
-	{ MODKEY,                       XK_d,                              spawn,                 SHCMD("dmenu_run") },
-	{ MODKEY,                       XK_p,                              spawn,                 SHCMD("passmenu -i") },
+	{ MODKEY,                       XK_d,                              spawn,                 SHCMD("dmenu_run -l 30") },
+	{ MODKEY,                       XK_p,                              spawn,                 SHCMD("passmenu -i -l 30") },
 	{ MODKEY,                       XK_u,                              spawn,                 SHCMD("dmenu-emojis") },
 	{ MODKEY|ShiftMask,             XK_m,                              spawn,                 SHCMD("dmenu-mount") },
 	{ MODKEY|ShiftMask,             XK_u,                              spawn,                 SHCMD("dmenu-unmount") },
