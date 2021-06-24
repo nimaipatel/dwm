@@ -106,7 +106,7 @@ ResourcePref resources[] = {
 static Key keys[] = {
 	/* modifier                     key                                function               argument */
 	{ MODKEY,                       XK_Return,                         spawn,                 {.v = termcmd } },
-	{ MODKEY,                       XK_b,                              togglebar,             {0} },
+	{ MODKEY|ShiftMask,             XK_b,                              togglebar,             {0} },
 	{ MODKEY,                       XK_minus,                          setgaps,               {.i = -1 } },
 	{ MODKEY,                       XK_equal,                          setgaps,               {.i = +1 } },
 	{ MODKEY,                       XK_BackSpace,                      setgaps,               {.i = 0  } },
@@ -143,9 +143,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_y,                              spawn,                 SHCMD("launch-tmux-dmenu") },
 	{ MODKEY,                       XK_e,                              spawn,                 SHCMD("dmenu-change-mode") },
 	{ MODKEY|ShiftMask,             XK_e,                              spawn,                 SHCMD("dmenu-change-font") },
-	{ MODKEY,                       XK_F2,                             spawn,                 SHCMD("$BROWSER") },
-	{ MODKEY,                       XK_F3,                             spawn,                 SHCMD("$TERMINAL -e $TERMINAL_FILE_BROWSER") },
-	{ MODKEY,                       XK_F4,                             spawn,                 SHCMD("$GUI_FILE_BROWSER") },
+	{ MODKEY,                       XK_b,                              spawn,                 SHCMD("$BROWSER") },
+	{ MODKEY,                       XK_r,                              spawn,                 SHCMD("$TERMINAL -e $TERMINAL_FILE_BROWSER") },
+	{ MODKEY|ShiftMask,             XK_r,                              spawn,                 SHCMD("$GUI_FILE_BROWSER") },
 	{ MODKEY,                       XK_w,                              spawn,                 SHCMD("dmenu-wifi") },
 	{ MODKEY,                       XK_q,                              spawn,                 SHCMD("lockscreen") },
 	{ MODKEY|ShiftMask,             XK_p,                              spawn,                 SHCMD("killall picom || picom") },
