@@ -109,7 +109,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,                              togglebar,             {0} },
 	{ MODKEY,                       XK_minus,                          setgaps,               {.i = -1 } },
 	{ MODKEY,                       XK_equal,                          setgaps,               {.i = +1 } },
-	{ MODKEY,                       XK_BackSpace,                          setgaps,               {.i = 0  } },
+	{ MODKEY,                       XK_BackSpace,                      setgaps,               {.i = 0  } },
 	{ MODKEY,                       XK_x,                              swalstopsel,           {0} },
 	{ MODKEY,                       XK_F12,                            xrdb,                  {.v = NULL } },
 	{ MODKEY,                       XK_n,                              togglescratch,         {.ui = 0 } },
