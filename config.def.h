@@ -9,9 +9,9 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const int user_bh            = 20;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int focusonwheel       = 0;
 static const int viewontag         = 1;     /* Switch view on tag switch */
-static char font[]            = "monospace:size=8";
+static char font[]            = "monospace:size=12";
 static char dmenufont[]       = "monospace:size=8";
-static const char *fonts[]          = { font, "joypixels:size=8", "Symbols Nerd Font:size=8",  };
+static const char *fonts[]          = { font, "joypixels:size=10", "Symbols Nerd Font:size=10",  };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -143,16 +143,16 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,                          tagmon,                {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,                         tagmon,                {.i = +1 } },
 	{ MODKEY,                       XK_d,                              spawn,                 SHCMD("dmenu_run -l 30") },
-	{ MODKEY,                       XK_p,                              spawn,                 SHCMD("passmenu -i -l 30") },
-	{ MODKEY,                       XK_u,                              spawn,                 SHCMD("dmenu-emojis") },
-	{ MODKEY,                       XK_y,                              spawn,                 SHCMD("launch-tmux-dmenu") },
+	{ MODKEY,                       XK_p,                              spawn,                 SHCMD("passmenu -p 'Select Password'") },
+	{ MODKEY,                       XK_u,                              spawn,                 SHCMD("unicode-selector") },
+	{ MODKEY,                       XK_y,                              spawn,                 SHCMD("tmux-session-selector") },
 	{ MODKEY,                       XK_e,                              spawn,                 SHCMD("$TERMINAL -e $EDITOR") },
 	{ MODKEY,                       XK_b,                              spawn,                 SHCMD("$BROWSER") },
 	{ MODKEY,                       XK_r,                              spawn,                 SHCMD("$TERMINAL -e $TERMINAL_FILE_BROWSER") },
 	{ MODKEY|ShiftMask,             XK_r,                              spawn,                 SHCMD("$GUI_FILE_BROWSER") },
 	{ MODKEY,                       XK_q,                              spawn,                 SHCMD("lockscreen") },
 	{ MODKEY|ShiftMask,             XK_p,                              spawn,                 SHCMD("killall picom || picom") },
-	{ MODKEY|ShiftMask,             XK_x,                              spawn,                 SHCMD("dmenu-sys-options") },
+	{ MODKEY|ShiftMask,             XK_x,                              spawn,                 SHCMD("sys-options") },
 	{ 0,                            XK_Print,                          spawn,                 SHCMD("scrot --exec 'mv \"$f\" ~/pictures/screenshots && notify-send \"Saved $f\"'") },
 	{ MODKEY,                       XK_Print,                          spawn,                 SHCMD("scrot --line style=dash,width=3,color=\"red\" --select --exec 'mv \"$f\" ~/pictures/screenshots && notify-send \"Saved $f\"'") },
 	{ ShiftMask,                    XK_Print,                          spawn,                 SHCMD("scrot --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'") },
