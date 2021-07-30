@@ -142,7 +142,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period,                         focusmon,              {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,                          tagmon,                {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,                         tagmon,                {.i = +1 } },
-	{ MODKEY,                       XK_d,                              spawn,                 SHCMD("dmenu_run -l 30") },
+	{ MODKEY,                       XK_d,                              spawn,                 SHCMD("fzf-launcher") },
 	{ MODKEY,                       XK_p,                              spawn,                 SHCMD("passmenu -p 'Select Password'") },
 	{ MODKEY,                       XK_u,                              spawn,                 SHCMD("unicode-selector") },
 	{ MODKEY,                       XK_y,                              spawn,                 SHCMD("tmux-session-selector") },
