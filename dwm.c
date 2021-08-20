@@ -2801,7 +2801,7 @@ resource_load(XrmDatabase db, char *name, enum resource_type rtype, void *dst)
 	char *type;
 	XrmValue ret;
 
-	snprintf(fullname, sizeof(fullname), "%s.%s", "dwm", name);
+	snprintf(fullname, sizeof(fullname), "%s%s", "*", name);
 	fullname[sizeof(fullname) - 1] = '\0';
 
 	XrmGetResource(db, fullname, "*", &type, &ret);
