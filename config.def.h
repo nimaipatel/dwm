@@ -146,7 +146,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_r,                              spawn,                 SHCMD("$TERMINAL -e $TERMINAL_FILE_BROWSER") },
 	{ MODKEY|ShiftMask,             XK_r,                              spawn,                 SHCMD("$GUI_FILE_BROWSER") },
 	{ MODKEY,                       XK_q,                              spawn,                 SHCMD("lockscreen") },
-	{ MODKEY|ShiftMask,             XK_p,                              spawn,                 SHCMD("killall picom || picom") },
+	{ MODKEY|ShiftMask,             XK_p,                              spawn,                 SHCMD("toggle-rounded-corners") },
 	{ MODKEY|ShiftMask,             XK_x,                              spawn,                 SHCMD("sys-options") },
 	{ 0,                            XK_Print,                          spawn,                 SHCMD("scrot --exec 'mv \"$f\" ~/pictures/screenshots && notify-send \"Saved $f\"'") },
 	{ MODKEY,                       XK_Print,                          spawn,                 SHCMD("scrot --line style=dash,width=3,color=\"red\" --select --exec 'mv \"$f\" ~/pictures/screenshots && notify-send \"Saved $f\"'") },
