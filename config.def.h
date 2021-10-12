@@ -140,7 +140,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,                              spawn,                 SHCMD("passmenu -p 'Select Password'") },
 	{ MODKEY,                       XK_u,                              spawn,                 SHCMD("unicode-selector") },
 	{ MODKEY,                       XK_y,                              spawn,                 SHCMD("tmux-session-selector") },
-	{ MODKEY,                       XK_e,                              spawn,                 SHCMD("$TERMINAL -e $EDITOR") },
+	{ MODKEY,                       XK_e,                              spawn,                 SHCMD("$TERMINAL -e tmux new-session -As def") },
 	{ MODKEY,                       XK_b,                              spawn,                 SHCMD("$BROWSER") },
 	{ MODKEY|ControlMask,           XK_b,                              spawn,                 SHCMD("vieb-incognito") },
 	{ MODKEY,                       XK_r,                              spawn,                 SHCMD("$TERMINAL -e $TERMINAL_FILE_BROWSER") },
