@@ -28,7 +28,7 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = { "st", "-g", "120x40", "-n", "ncmpcpp", "-e", "ncmpcpp", NULL };
+const char *spcmd1[] = { "st", "-g", "200x45", "-n", "ncmpcpp", "-e", "spt", NULL };
 const char *spcmd2[] = { "st", "-g", "120x40", "-n", "scratch", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
@@ -142,6 +142,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_y,                              spawn,                 SHCMD("tmux-session-selector") },
 	{ MODKEY,                       XK_e,                              spawn,                 SHCMD("$TERMINAL -e tmux new-session -As def") },
 	{ MODKEY,                       XK_b,                              spawn,                 SHCMD("$BROWSER") },
+	{ MODKEY,                       XK_s,                              spawn,                 SHCMD("browser-search") },
 	{ MODKEY|ControlMask,           XK_b,                              spawn,                 SHCMD("vieb-incognito") },
 	{ MODKEY,                       XK_r,                              spawn,                 SHCMD("$TERMINAL -e $TERMINAL_FILE_BROWSER") },
 	{ MODKEY|ShiftMask,             XK_r,                              spawn,                 SHCMD("$GUI_FILE_BROWSER") },
