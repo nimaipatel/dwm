@@ -106,72 +106,119 @@ ResourcePref resources[] = {
 };
 
 static Key keys[] = {
-	/* modifier                     key                                function               argument */
+	/* spawn new terminal */
 	{ MODKEY,                       XK_Return,                         spawn,                 {.v = termcmd } },
+
+	/* toggle the bar */
 	{ MODKEY|ShiftMask,             XK_b,                              togglebar,             {0} },
+
+	/* change gaps */
 	{ MODKEY,                       XK_minus,                          setgaps,               {.i = -1 } },
 	{ MODKEY,                       XK_equal,                          setgaps,               {.i = +1 } },
 	{ MODKEY,                       XK_BackSpace,                      setgaps,               {.i = 0  } },
+
+	/* undo window swallow */
 	{ MODKEY,                       XK_x,                              swalstopsel,           {0} },
+
+	/* TODO: handle this using signals */
 	{ MODKEY,                       XK_F12,                            xrdb,                  {.v = NULL } },
+
+	/* toggle ncmpcpp in scratchpad */
 	{ MODKEY,                       XK_n,                              togglescratch,         {.ui = 0 } },
+
+	/* toggle scratchpad */
 	{ MODKEY,                       XK_slash,                          togglescratch,         {.ui = 1 } },
+
+	/* pesudo-vim bindings for focusing next window in stack */
 	{ MODKEY,                       XK_j,                              focusstack,            {.i = +1 } },
 	{ MODKEY,                       XK_k,                              focusstack,            {.i = -1 } },
+
+	/* rotating the stack */
+	{ MODKEY|ShiftMask,             XK_k,                              inplacerotate,         {.i = +2} },
+	{ MODKEY|ShiftMask,             XK_j,                              inplacerotate,         {.i = -2} },
+	{ MODKEY|ShiftMask,             XK_l,                              inplacerotate,         {.i = +1} },
+	{ MODKEY|ShiftMask,             XK_h,                              inplacerotate,         {.i = -1} },
+
+	/* change number of windows in master frame */
 	{ MODKEY,                       XK_o,                              incnmaster,            {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_o,                              incnmaster,            {.i = -1 } },
+
+	/* modify width of master region */
 	{ MODKEY,                       XK_h,                              setmfact,              {.f = -0.01} },
 	{ MODKEY,                       XK_l,                              setmfact,              {.f = +0.01} },
+
+
 	{ MODKEY|ShiftMask,             XK_Return,                         zoom,                  {0} },
+
+	/* switch between previous two tags */
 	{ MODKEY,                       XK_Tab,                            view,                  {0} },
+
+	/* kill focused window */
 	{ MODKEY|ShiftMask,             XK_q,                              killclient,            {0} },
+
+	/* change layouts */
 	{ MODKEY,                       XK_t,                              setlayout,             {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,                              setlayout,             {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,                              setlayout,             {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,                          setlayout,             {0} },
+
+	/* floating windows */
 	{ MODKEY|ShiftMask,             XK_space,                          togglefloating,        {0} },
-	{ MODKEY,                       XK_0,                              view,                  {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,                              tag,                   {.ui = ~0 } },
+
+	/* for multiple monitors */
 	{ MODKEY,                       XK_comma,                          focusmon,              {.i = -1 } },
 	{ MODKEY,                       XK_period,                         focusmon,              {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,                          tagmon,                {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,                         tagmon,                {.i = +1 } },
+
+	/* program launcher */
 	{ MODKEY,                       XK_d,                              spawn,                 SHCMD("fzf-launcher") },
+
+	/* password */
 	{ MODKEY,                       XK_p,                              spawn,                 SHCMD("passmenu -p 'Select Password'") },
+	
+	/* search for unicode characters */
 	{ MODKEY,                       XK_u,                              spawn,                 SHCMD("unicode-selector") },
-	{ MODKEY,                       XK_y,                              spawn,                 SHCMD("tmux-session-selector") },
+
 	{ MODKEY,                       XK_e,                              spawn,                 SHCMD("$TERMINAL -e tmux new-session -As def") },
-	{ MODKEY,                       XK_b,                              spawn,                 SHCMD("$BROWSER") },
+
+	/* search some websites for a term */
 	{ MODKEY,                       XK_s,                              spawn,                 SHCMD("browser-search") },
-	{ MODKEY|ControlMask,           XK_b,                              spawn,                 SHCMD("vieb-incognito") },
-	{ MODKEY,                       XK_r,                              spawn,                 SHCMD("$TERMINAL -e $TERMINAL_FILE_BROWSER") },
-	{ MODKEY|ShiftMask,             XK_r,                              spawn,                 SHCMD("$GUI_FILE_BROWSER") },
+
+	/* screenlock */
 	{ MODKEY,                       XK_q,                              spawn,                 SHCMD("lockscreen") },
-	{ MODKEY|ShiftMask,             XK_p,                              spawn,                 SHCMD("toggle-rounded-corners") },
+
+	/* get options for reboot, shutdown, et cetera*/
 	{ MODKEY|ShiftMask,             XK_x,                              spawn,                 SHCMD("sys-options") },
+
+	/* taking screenshots */
 	{ 0,                            XK_Print,                          spawn,                 SHCMD("scrot --exec 'mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f\"'") },
 	{ MODKEY,                       XK_Print,                          spawn,                 SHCMD("scrot --line style=dash,width=3,color=\"red\" --select --exec 'mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f\"'") },
 	{ ShiftMask,                    XK_Print,                          spawn,                 SHCMD("scrot --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'") },
 	{ MODKEY|ShiftMask,             XK_Print,                          spawn,                 SHCMD("scrot --line style=dash,width=3,color=\"red\" --select --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'") },
+
+	/* brightness controls */
 	{ 0,                            XF86XK_MonBrightnessUp,            spawn,                 SHCMD("brightnessctl set +1% ; pkill -RTMIN+19 dwmblocks") },
 	{ 0,                            XF86XK_MonBrightnessDown,          spawn,                 SHCMD("brightnessctl set 1%- ; pkill -RTMIN+19 dwmblocks") },
 	{ MODKEY|ShiftMask,             XK_k,                              spawn,                 SHCMD("brightnessctl set +1% ; pkill -RTMIN+19 dwmblocks") },
 	{ MODKEY|ShiftMask,             XK_j,                              spawn,                 SHCMD("brightnessctl set 1%- ; pkill -RTMIN+19 dwmblocks") },
+
+	/* audio/volume controls */
 	{ 0,                            XF86XK_AudioMute,                  spawn,                 SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ 0,                            XF86XK_AudioRaiseVolume,           spawn,                 SHCMD("pamixer --allow-boost -i 1; kill -44 $(pidof dwmblocks)") },
 	{ 0,                            XF86XK_AudioLowerVolume,           spawn,                 SHCMD("pamixer --allow-boost -d 1; kill -44 $(pidof dwmblocks)") },
-	{ 0,                            XF86XK_AudioPrev,                  spawn,                 SHCMD("mpc prev") },
-	{ 0,                            XF86XK_AudioNext,                  spawn,                 SHCMD("mpc next") },
-	{ 0,                            XF86XK_AudioPlay,                  spawn,                 SHCMD("mpc toggle") },
 	{ MODKEY|ControlMask,           XK_space,                          spawn,                 SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ControlMask,           XK_k,                              spawn,                 SHCMD("pamixer --allow-boost -i 1; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ControlMask,           XK_j,                              spawn,                 SHCMD("pamixer --allow-boost -d 1; kill -44 $(pidof dwmblocks)") },
 
-	{ MODKEY|ShiftMask,             XK_h,      inplacerotate,  {.i = -1} },
-	{ MODKEY|ShiftMask,             XK_l,      inplacerotate,  {.i = +1} },
-	{ MODKEY|ShiftMask,             XK_j,      inplacerotate,  {.i = -2} },
-	{ MODKEY|ShiftMask,             XK_k,      inplacerotate,  {.i = +2} },
+	/* music controls */
+	{ 0,                            XF86XK_AudioPrev,                  spawn,                 SHCMD("mpc prev") },
+	{ 0,                            XF86XK_AudioNext,                  spawn,                 SHCMD("mpc next") },
+	{ 0,                            XF86XK_AudioPlay,                  spawn,                 SHCMD("mpc toggle") },
 
+	/* switch between and activate tags (0 is for all) */
+	{ MODKEY,                       XK_0,                              view,                  {.ui = ~0 } },
+	{ MODKEY|ShiftMask,             XK_0,                              tag,                   {.ui = ~0 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
