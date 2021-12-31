@@ -166,6 +166,12 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_space,                          spawn,                 SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ControlMask,           XK_k,                              spawn,                 SHCMD("pamixer --allow-boost -i 1; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ControlMask,           XK_j,                              spawn,                 SHCMD("pamixer --allow-boost -d 1; kill -44 $(pidof dwmblocks)") },
+
+	{ MODKEY|ShiftMask,             XK_h,      inplacerotate,  {.i = -1} },
+	{ MODKEY|ShiftMask,             XK_l,      inplacerotate,  {.i = +1} },
+	{ MODKEY|ShiftMask,             XK_j,      inplacerotate,  {.i = -2} },
+	{ MODKEY|ShiftMask,             XK_k,      inplacerotate,  {.i = +2} },
+
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
