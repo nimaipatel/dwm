@@ -200,8 +200,6 @@ static Key keys[] = {
 	/* brightness controls */
 	{ 0,                            XF86XK_MonBrightnessUp,            spawn,                 SHCMD("brightnessctl set +1% ; pkill -RTMIN+19 dwmblocks") },
 	{ 0,                            XF86XK_MonBrightnessDown,          spawn,                 SHCMD("brightnessctl set 1%- ; pkill -RTMIN+19 dwmblocks") },
-	{ MODKEY|ShiftMask,             XK_k,                              spawn,                 SHCMD("brightnessctl set +1% ; pkill -RTMIN+19 dwmblocks") },
-	{ MODKEY|ShiftMask,             XK_j,                              spawn,                 SHCMD("brightnessctl set 1%- ; pkill -RTMIN+19 dwmblocks") },
 
 	/* audio/volume controls */
 	{ 0,                            XF86XK_AudioMute,                  spawn,                 SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
