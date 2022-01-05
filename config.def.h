@@ -191,10 +191,18 @@ static Key keys[] = {
 	/* get options for reboot, shutdown, et cetera*/
 	{ MODKEY|ShiftMask,             XK_x,                              spawn,                 SHCMD("sys-options") },
 
-	/* taking screenshots */
+	/*** taking screenshots ***/
+	/* fullscreen + save to folder */
 	{ 0,                            XK_Print,                          spawn,                 SHCMD("scrot --exec 'mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f\"'") },
+	/* selection + save to folder */
 	{ MODKEY,                       XK_Print,                          spawn,                 SHCMD("scrot --line style=dash,width=3,color=\"red\" --select --exec 'mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f\"'") },
+	/* focused window + save to folder */
+	{ControlMask,                   XK_Print,                          spawn,                 SHCMD("scrot -u --exec 'mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f\"'")},
+	/* focused window + save to folder + copy to clipboard */
+	{ControlMask|ShiftMask,         XK_Print,                          spawn,                 SHCMD("scrot -u --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'")},
+	/* fullscreen + save to folder + copy to clipboard */
 	{ ShiftMask,                    XK_Print,                          spawn,                 SHCMD("scrot --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'") },
+	/* selection + save to folder + copy to clipboard */
 	{ MODKEY|ShiftMask,             XK_Print,                          spawn,                 SHCMD("scrot --line style=dash,width=3,color=\"red\" --select --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'") },
 
 	/* brightness controls */
