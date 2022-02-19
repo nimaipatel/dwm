@@ -204,7 +204,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,                            view,                  {0} },
 
 	/* kill focused window */
-	{ MODKEY|ShiftMask,             XK_q,                              killclient,            {0} },
+	{ MODKEY|ShiftMask,             XK_c,                              killclient,            {0} },
 
 	/* change layouts */
 	{ MODKEY,                       XK_t,                              setlayout,             {.v = &layouts[0]} },
