@@ -126,6 +126,7 @@ struct Monitor {
 	int mx, my, mw, mh;   /* screen size */
 	int wx, wy, ww, wh;   /* window area  */
 	int gappx;            /* gaps between windows */
+	unsigned int borderpx;
 	unsigned int seltags;
 	unsigned int sellt;
 	unsigned int tagset[2];
@@ -241,6 +242,7 @@ static void run(void);
 static void scan(void);
 static int sendevent(Client *c, Atom proto);
 static void sendmon(Client *c, Monitor *m);
+static void setborderpx(unsigned int borderpx);
 static void setclientstate(Client *c, long state);
 static void setfocus(Client *c);
 static void setfullscreen(Client *c, int fullscreen);
@@ -720,6 +722,7 @@ createmon(void)
 	m->mfact = mfact;
 	m->nmaster = nmaster;
 	m->showbar = showbar;
+	m->borderpx = borderpx;
 	m->topbar = topbar;
 	m->gappx = gappx;
 	m->lt[0] = &layouts[0];
@@ -1302,7 +1305,7 @@ manage(Window w, XWindowAttributes *wa)
 	/* only fix client y-offset, if the client center might cover the bar */
 	c->y = MAX(c->y, ((c->mon->by == c->mon->my) && (c->x + (c->w / 2) >= c->mon->wx)
 		&& (c->x + (c->w / 2) < c->mon->wx + c->mon->ww)) ? bh : c->mon->my);
-	c->bw = borderpx;
+	c->bw = c->mon->borderpx;
 
 	wc.border_width = c->bw;
 	XConfigureWindow(dpy, w, CWBorderWidth, &wc);
@@ -1776,14 +1779,60 @@ setfullscreen(Client *c, int fullscreen)
 void
 setgaps(const Arg *arg)
 {
-	if (arg->i == 0)
-		selmon->gappx = gappx;
-	else if (selmon->gappx + arg->i < 0)
+	if (arg->i == 0) {
+		if (selmon->gappx == 0)
+			selmon->gappx = gappx;
+		else
+			selmon->gappx = 0;
+	} else if (selmon->gappx + arg->i < 0) {
 		selmon->gappx = 0;
-	else
+	} else {
 		selmon->gappx += arg->i;
+	}
+
+	if (selmon->gappx == 0) {
+		setborderpx(1);
+		char *cmd[] = { "killall", "picom", NULL };
+		Arg sparg = {.v = &cmd};
+		spawn(&sparg);
+	} else {
+		setborderpx(5);
+		char *cmd[] = { "picom", NULL };
+		Arg sparg = {.v = &cmd};
+		spawn(&sparg);
+	}
+
 	arrange(selmon);
 }
+
+void
+setborderpx(unsigned int bpx)
+{
+	Client *c;
+	int prev_borderpx = selmon->borderpx;
+
+	selmon->borderpx = bpx;
+	for (c = selmon->clients; c; c = c->next)
+	{
+		if (c->bw + bpx < 0)
+			c->bw = selmon->borderpx = 0;
+		else
+			c->bw = selmon->borderpx;
+		if (c->isfloating || !selmon->lt[selmon->sellt]->arrange)
+		{
+			if (bpx != 0 && prev_borderpx + bpx >= 0)
+				resize(c, c->x, c->y, c->w-(bpx*2), c->h-(bpx*2), 0);
+			else if (bpx != 0)
+				resizeclient(c, c->x, c->y, c->w, c->h);
+			else if (prev_borderpx > borderpx)
+				resize(c, c->x, c->y, c->w + 2*(prev_borderpx - borderpx), c->h + 2*(prev_borderpx - borderpx), 0);
+			else if (prev_borderpx < borderpx)
+				resize(c, c->x, c->y, c->w-2*(borderpx - prev_borderpx), c->h-2*(borderpx - prev_borderpx), 0);
+		}
+	}
+	arrange(selmon);
+}
+
 
 void
 setlayout(const Arg *arg)
