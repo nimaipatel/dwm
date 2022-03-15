@@ -122,171 +122,173 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Keychord *keychords[] = {
 	/* spawn new terminal */
-	&((Keychord){1, {{ MODKEY,                       XK_Return }},                         spawn,                 {.v = termcmd } }),
+	&((Keychord){1, {{ MODKEY, XK_Return }},                                               spawn,                 {.v = termcmd } }),
 
 	/* toggle the bar */
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_b }},                              togglebar,             {0} }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_b }},                                          togglebar,             {0} }),
 
 	/* change gaps */
-	&((Keychord){1, {{ MODKEY,                       XK_minus }},                          setgaps,               {.i = -1 } }),
-	&((Keychord){1, {{ MODKEY,                       XK_equal }},                          setgaps,               {.i = +1 } }),
-	&((Keychord){1, {{ MODKEY,                       XK_BackSpace }},                      setgaps,               {.i = 0  } }),
+	&((Keychord){1, {{ MODKEY, XK_minus }},                                                setgaps,               {.i = -1 } }),
+	&((Keychord){1, {{ MODKEY, XK_equal }},                                                setgaps,               {.i = +1 } }),
+	&((Keychord){1, {{ MODKEY, XK_BackSpace }},                                            setgaps,               {.i = 0  } }),
 
 	/* undo window swallow */
-	&((Keychord){1, {{ MODKEY,                       XK_x }},                              swalstopsel,           {0} }),
+	&((Keychord){1, {{ MODKEY, XK_x }},                                                    swalstopsel,           {0} }),
 
 	/* TODO: handle this using signals */
-	&((Keychord){1, {{ MODKEY,                       XK_F12 }},                            xrdb,                  {.v = NULL } }),
+	&((Keychord){1, {{ MODKEY, XK_F12 }},                                                  xrdb,                  {.v = NULL } }),
 
 	/* toggle ncmpcpp in scratchpad */
-	&((Keychord){1, {{ MODKEY,                       XK_n }},                              togglescratch,         {.ui = 0 } }),
+	&((Keychord){1, {{ MODKEY, XK_n }},                                                    togglescratch,         {.ui = 0 } }),
 
 	/* toggle scratchpad */
-	&((Keychord){1, {{ MODKEY,                       XK_slash }},                          togglescratch,         {.ui = 1 } }),
+	&((Keychord){1, {{ MODKEY, XK_slash }},                                                togglescratch,         {.ui = 1 } }),
 
 	/* pesudo-vim bindings for focusing next window in stack */
-	&((Keychord){1, {{ MODKEY,                       XK_j }},                              focusstack,            {.i = +1 } }),
-	&((Keychord){1, {{ MODKEY,                       XK_k }},                              focusstack,            {.i = -1 } }),
+	&((Keychord){1, {{ MODKEY, XK_j }},                                                    focusstack,            {.i = +1 } }),
+	&((Keychord){1, {{ MODKEY, XK_k }},                                                    focusstack,            {.i = -1 } }),
 
 	/* rotating the stack */
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_k }},                              inplacerotate,         {.i = +2} }),
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_j }},                              inplacerotate,         {.i = -2} }),
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_l }},                              inplacerotate,         {.i = +1} }),
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_h }},                              inplacerotate,         {.i = -1} }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_k }},                                          inplacerotate,         {.i = +2} }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_j }},                                          inplacerotate,         {.i = -2} }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_l }},                                          inplacerotate,         {.i = +1} }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_h }},                                          inplacerotate,         {.i = -1} }),
 
 	/* change number of windows in master frame */
-	&((Keychord){1, {{ MODKEY,                       XK_o }},                              incnmaster,            {.i = +1 } }),
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_o }},                              incnmaster,            {.i = -1 } }),
+	&((Keychord){1, {{ MODKEY, XK_o }},                                                    incnmaster,            {.i = +1 } }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_o }},                                          incnmaster,            {.i = -1 } }),
 
 	/* modify width of master region */
-	&((Keychord){1, {{ MODKEY,                       XK_h }},                              setmfact,              {.f = -0.01} }),
-	&((Keychord){1, {{ MODKEY,                       XK_l }},                              setmfact,              {.f = +0.01} }),
+	&((Keychord){1, {{ MODKEY, XK_h }},                                                    setmfact,              {.f = -0.01} }),
+	&((Keychord){1, {{ MODKEY, XK_l }},                                                    setmfact,              {.f = +0.01} }),
 
 
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_Return }},                         zoom,                  {0} }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_Return }},                                     zoom,                  {0} }),
 
 	/* switch between previous two tags */
-	&((Keychord){1, {{ MODKEY,                       XK_Tab }},                            view,                  {0} }),
+	&((Keychord){1, {{ MODKEY, XK_Tab }},                                                  view,                  {0} }),
 
 	/* kill focused window */
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_c }},                              killclient,            {0} }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_c }},                                          killclient,            {0} }),
 
 	/* change layouts */
-	&((Keychord){1, {{ MODKEY,                       XK_t }},                              setlayout,             {.v = &layouts[0]} }),
-	&((Keychord){1, {{ MODKEY,                       XK_f }},                              setlayout,             {.v = &layouts[1]} }),
-	&((Keychord){1, {{ MODKEY,                       XK_m }},                              setlayout,             {.v = &layouts[2]} }),
-	&((Keychord){1, {{ MODKEY,                       XK_g }},                              setlayout,             {.v = &layouts[3]} }),
-	&((Keychord){1, {{ MODKEY,                       XK_space }},                          setlayout,             {0} }),
+	&((Keychord){1, {{ MODKEY, XK_t }},                                                    setlayout,             {.v = &layouts[0]} }),
+	&((Keychord){1, {{ MODKEY, XK_f }},                                                    setlayout,             {.v = &layouts[1]} }),
+	&((Keychord){1, {{ MODKEY, XK_m }},                                                    setlayout,             {.v = &layouts[2]} }),
+	&((Keychord){1, {{ MODKEY, XK_g }},                                                    setlayout,             {.v = &layouts[3]} }),
+	&((Keychord){1, {{ MODKEY, XK_space }},                                                setlayout,             {0} }),
 
 	/* floating windows */
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_space }},                          togglefloating,        {0} }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_space }},                                      togglefloating,        {0} }),
 
 	/* for multiple monitors */
-	&((Keychord){1, {{ MODKEY,                       XK_comma }},                          focusmon,              {.i = -1 } }),
-	&((Keychord){1, {{ MODKEY,                       XK_period }},                         focusmon,              {.i = +1 } }),
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_comma }},                          tagmon,                {.i = -1 } }),
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_period }},                         tagmon,                {.i = +1 } }),
+	&((Keychord){1, {{ MODKEY, XK_comma }},                                                focusmon,              {.i = -1 } }),
+	&((Keychord){1, {{ MODKEY, XK_period }},                                               focusmon,              {.i = +1 } }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_comma }},                                      tagmon,                {.i = -1 } }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_period }},                                     tagmon,                {.i = +1 } }),
 
 	/* program launcher */
-	&((Keychord){1, {{ MODKEY,                       XK_d }},                              spawn,                 SHCMD("fzf-launcher") }),
+	&((Keychord){1, {{ MODKEY, XK_d }},                                                    spawn,                 SHCMD("fzf-launcher") }),
 
 	/* password */
-	&((Keychord){1, {{ MODKEY,                       XK_p }},                              spawn,                 SHCMD("passmenu -p 'Select Password'") }),
+	&((Keychord){1, {{ MODKEY, XK_p }},                                                    spawn,                 SHCMD("passmenu -p 'Select Password'") }),
 	
 	/* search for unicode characters */
-	&((Keychord){1, {{ MODKEY,                       XK_u }},                              spawn,                 SHCMD("unicode-selector") }),
+	&((Keychord){1, {{ MODKEY, XK_u }},                                                    spawn,                 SHCMD("unicode-selector") }),
 
-	&((Keychord){1, {{ MODKEY,                       XK_e }},                              spawn,                 SHCMD("st -e tmux new-session -As def") }),
+	&((Keychord){1, {{ MODKEY, XK_e }},                                                    spawn,                 SHCMD("st -e tmux new-session -As def") }),
 
 	/* search some websites for a term */
-	&((Keychord){1, {{ MODKEY,                       XK_s }},                              spawn,                 SHCMD("browser-search") }),
+	&((Keychord){1, {{ MODKEY, XK_s }},                                                    spawn,                 SHCMD("browser-search") }),
 
 	/* screenlock */
-	&((Keychord){1, {{ MODKEY,                       XK_q }},                              spawn,                 SHCMD("lockscreen") }),
+	&((Keychord){1, {{ MODKEY, XK_q }},                                                    spawn,                 SHCMD("lockscreen") }),
 
 	/* get options for reboot, shutdown, et cetera*/
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_x }},                              spawn,                 SHCMD("sys-options") }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_x }},                                          spawn,                 SHCMD("sys-options") }),
 
 	/*** taking screenshots ***/
 	/* fullscreen + save to folder */
-	&((Keychord){1, {{ 0,                            XK_Print }},                          spawn,                 SHCMD("scrot --exec 'mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f\"'") }),
+	&((Keychord){1, {{ 0, XK_Print }},                                                     spawn,                 SHCMD("scrot --exec 'mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f\"'") }),
 	/* selection + save to folder */
-	&((Keychord){1, {{ MODKEY,                       XK_Print }},                          spawn,                 SHCMD("scrot --line style=dash,width=3,color=\"red\" --select --exec 'mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f\"'") }),
+	&((Keychord){1, {{ MODKEY, XK_Print }},                                                spawn,                 SHCMD("scrot --line style=dash,width=3,color=\"red\" --select --exec 'mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f\"'") }),
 	/* focused window + save to folder */
-	&((Keychord){1, {{ControlMask,                   XK_Print }},                          spawn,                 SHCMD("scrot -u --exec 'mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f\"'")}),
+	&((Keychord){1, {{ControlMask, XK_Print }},                                            spawn,                 SHCMD("scrot -u --exec 'mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f\"'")}),
 	/* focused window + save to folder + copy to clipboard */
-	&((Keychord){1, {{ControlMask|ShiftMask,         XK_Print }},                          spawn,                 SHCMD("scrot -u --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'")}),
+	&((Keychord){1, {{ControlMask|ShiftMask, XK_Print }},                                  spawn,                 SHCMD("scrot -u --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'")}),
 	/* fullscreen + save to folder + copy to clipboard */
-	&((Keychord){1, {{ ShiftMask,                    XK_Print }},                          spawn,                 SHCMD("scrot --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'") }),
+	&((Keychord){1, {{ ShiftMask, XK_Print }},                                             spawn,                 SHCMD("scrot --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'") }),
 	/* selection + save to folder + copy to clipboard */
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_Print }},                          spawn,                 SHCMD("scrot --line style=dash,width=3,color=\"red\" --select --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'") }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_Print }},                                      spawn,                 SHCMD("scrot --line style=dash,width=3,color=\"red\" --select --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'") }),
 
 	/* brightness controls */
-	&((Keychord){1, {{ 0,                            XF86XK_MonBrightnessUp }},            spawn,                 SHCMD("brightnessctl set +1% ; pkill -RTMIN+19 dwmblocks") }),
-	&((Keychord){1, {{ 0,                            XF86XK_MonBrightnessDown }},          spawn,                 SHCMD("brightnessctl set 1%- ; pkill -RTMIN+19 dwmblocks") }),
+	&((Keychord){1, {{ 0, XF86XK_MonBrightnessUp }},                                       spawn,                 SHCMD("brightnessctl set +1% ; pkill -RTMIN+19 dwmblocks") }),
+	&((Keychord){1, {{ 0, XF86XK_MonBrightnessDown }},                                     spawn,                 SHCMD("brightnessctl set 1%- ; pkill -RTMIN+19 dwmblocks") }),
 
 	/* audio/volume controls */
-	&((Keychord){1, {{ 0,                            XF86XK_AudioMute }},                  spawn,                 SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") }),
-	&((Keychord){1, {{ 0,                            XF86XK_AudioRaiseVolume }},           spawn,                 SHCMD("pamixer --allow-boost -i 1; kill -44 $(pidof dwmblocks)") }),
-	&((Keychord){1, {{ 0,                            XF86XK_AudioLowerVolume }},           spawn,                 SHCMD("pamixer --allow-boost -d 1; kill -44 $(pidof dwmblocks)") }),
-	&((Keychord){1, {{ MODKEY|ControlMask,           XK_space }},                          spawn,                 SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") }),
-	&((Keychord){1, {{ MODKEY|ControlMask,           XK_k }},                              spawn,                 SHCMD("pamixer --allow-boost -i 1; kill -44 $(pidof dwmblocks)") }),
-	&((Keychord){1, {{ MODKEY|ControlMask,           XK_j }},                              spawn,                 SHCMD("pamixer --allow-boost -d 1; kill -44 $(pidof dwmblocks)") }),
+	&((Keychord){1, {{ 0, XF86XK_AudioMute }},                                             spawn,                 SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") }),
+	&((Keychord){1, {{ 0, XF86XK_AudioRaiseVolume }},                                      spawn,                 SHCMD("pamixer --allow-boost -i 1; kill -44 $(pidof dwmblocks)") }),
+	&((Keychord){1, {{ 0, XF86XK_AudioLowerVolume }},                                      spawn,                 SHCMD("pamixer --allow-boost -d 1; kill -44 $(pidof dwmblocks)") }),
+	&((Keychord){1, {{ MODKEY|ControlMask, XK_space }},                                    spawn,                 SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") }),
+	&((Keychord){1, {{ MODKEY|ControlMask, XK_k }},                                        spawn,                 SHCMD("pamixer --allow-boost -i 1; kill -44 $(pidof dwmblocks)") }),
+	&((Keychord){1, {{ MODKEY|ControlMask, XK_j }},                                        spawn,                 SHCMD("pamixer --allow-boost -d 1; kill -44 $(pidof dwmblocks)") }),
 
 	/* music controls */
-	&((Keychord){1, {{ 0,                            XF86XK_AudioPrev }},                  spawn,                 SHCMD("mpc prev") }),
-	&((Keychord){1, {{ 0,                            XF86XK_AudioNext }},                  spawn,                 SHCMD("mpc next") }),
-	&((Keychord){1, {{ 0,                            XF86XK_AudioPlay }},                  spawn,                 SHCMD("mpc toggle") }),
+	&((Keychord){1, {{ 0, XF86XK_AudioPrev }},                                             spawn,                 SHCMD("mpc prev") }),
+	&((Keychord){1, {{ 0, XF86XK_AudioNext }},                                             spawn,                 SHCMD("mpc next") }),
+	&((Keychord){1, {{ 0, XF86XK_AudioPlay }},                                             spawn,                 SHCMD("mpc toggle") }),
 
 	/* switch between and activate tags (0 is for all) */
-	&((Keychord){1, {{ MODKEY,                       XK_0 }},                              view,                  {.ui = ~0 } }),
-	&((Keychord){1, {{ MODKEY|ShiftMask,             XK_0 }},                              tag,                   {.ui = ~0 } }),
-	TAGKEYS(                        XK_1,                      0)
-	TAGKEYS(                        XK_2,                      1)
-	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
+	&((Keychord){1, {{ MODKEY, XK_0 }},                                                    view,                  {.ui = ~0 } }),
+	&((Keychord){1, {{ MODKEY|ShiftMask, XK_0 }},                                          tag,                   {.ui = ~0 } }),
+
+	/* for switching tags */
+	TAGKEYS(           XK_1,                                                               0)
+	TAGKEYS(           XK_2,                                                               1)
+	TAGKEYS(           XK_3,                                                               2)
+	TAGKEYS(           XK_4,                                                               3)
+	TAGKEYS(           XK_5,                                                               4)
+	TAGKEYS(           XK_6,                                                               5)
+	TAGKEYS(           XK_7,                                                               6)
+	TAGKEYS(           XK_8,                                                               7)
+	TAGKEYS(           XK_9,                                                               8)
 };
 
 /*
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-		{ "font",               STRING,  &font },
-		{ "dmenufont",          STRING,  &dmenufont },
-		{ "normbgcolor",        STRING,  &normbgcolor },
-		{ "normbordercolor",    STRING,  &normbordercolor },
-		{ "normfgcolor",        STRING,  &normfgcolor },
-		{ "selbgcolor",         STRING,  &selbgcolor },
-		{ "selbordercolor",     STRING,  &selbordercolor },
-		{ "selfgcolor",         STRING,  &selfgcolor },
-		{ "borderpx",          	INTEGER, &borderpx },
-		{ "snap",          		INTEGER, &snap },
-		{ "showbar",          	INTEGER, &showbar },
-		{ "topbar",          	INTEGER, &topbar },
-		{ "nmaster",          	INTEGER, &nmaster },
-		{ "resizehints",       	INTEGER, &resizehints },
-		{ "mfact",      	 	FLOAT,   &mfact },
-    { "color0", STRING, &termcol0 },
-    { "color1", STRING, &termcol1 },
-    { "color2", STRING, &termcol2 },
-    { "color3", STRING, &termcol3 },
-    { "color4", STRING, &termcol4 },
-    { "color5", STRING, &termcol5 },
-    { "color6", STRING, &termcol6 },
-    { "color7", STRING, &termcol7 },
-    { "color8", STRING, &termcol8 },
-    { "color9", STRING, &termcol9 },
-    { "color10", STRING, &termcol10 },
-    { "color11", STRING, &termcol11 },
-    { "color12", STRING, &termcol12 },
-    { "color13", STRING, &termcol13 },
-    { "color14", STRING, &termcol14 },
-    { "color15", STRING, &termcol15 },
+	{ "font",               STRING,  &font },
+	{ "dmenufont",          STRING,  &dmenufont },
+	{ "normbgcolor",        STRING,  &normbgcolor },
+	{ "normbordercolor",    STRING,  &normbordercolor },
+	{ "normfgcolor",        STRING,  &normfgcolor },
+	{ "selbgcolor",         STRING,  &selbgcolor },
+	{ "selbordercolor",     STRING,  &selbordercolor },
+	{ "selfgcolor",         STRING,  &selfgcolor },
+	{ "borderpx",           INTEGER, &borderpx },
+	{ "snap",               INTEGER, &snap },
+	{ "showbar",            INTEGER, &showbar },
+	{ "topbar",             INTEGER, &topbar },
+	{ "nmaster",            INTEGER, &nmaster },
+	{ "resizehints",        INTEGER, &resizehints },
+	{ "mfact",              FLOAT,   &mfact },
+	{ "color0",             STRING, &termcol0 },
+	{ "color1",             STRING, &termcol1 },
+	{ "color2",             STRING, &termcol2 },
+	{ "color3",             STRING, &termcol3 },
+	{ "color4",             STRING, &termcol4 },
+	{ "color5",             STRING, &termcol5 },
+	{ "color6",             STRING, &termcol6 },
+	{ "color7",             STRING, &termcol7 },
+	{ "color8",             STRING, &termcol8 },
+	{ "color9",             STRING, &termcol9 },
+	{ "color10",            STRING, &termcol10 },
+	{ "color11",            STRING, &termcol11 },
+	{ "color12",            STRING, &termcol12 },
+	{ "color13",            STRING, &termcol13 },
+	{ "color14",            STRING, &termcol14 },
+	{ "color15",            STRING, &termcol15 },
 };
 
 /* button definitions */
