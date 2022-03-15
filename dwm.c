@@ -108,9 +108,14 @@ struct Client {
 typedef struct {
 	unsigned int mod;
 	KeySym keysym;
+} Key;
+
+typedef struct {
+	unsigned int n;
+	const Key keys[5];
 	void (*func)(const Arg *);
 	const Arg arg;
-} Key;
+} Keychord;
 
 typedef struct {
 	const char *symbol;
@@ -332,6 +337,7 @@ static Drw *drw;
 static Monitor *mons, *selmon;
 static Swallow *swallows;
 static Window root, wmcheckwin;
+unsigned int currentkey = 0;
 
 /* configuration, allows nested code to access above variables */
 #include "config.h"
@@ -1208,16 +1214,17 @@ grabkeys(void)
 {
 	updatenumlockmask();
 	{
-		unsigned int i, j;
+		unsigned int i, k;
 		unsigned int modifiers[] = { 0, LockMask, numlockmask, numlockmask|LockMask };
 		KeyCode code;
-
 		XUngrabKey(dpy, AnyKey, AnyModifier, root);
-		for (i = 0; i < LENGTH(keys); i++)
-			if ((code = XKeysymToKeycode(dpy, keys[i].keysym)))
-				for (j = 0; j < LENGTH(modifiers); j++)
-					XGrabKey(dpy, code, keys[i].mod | modifiers[j], root,
-						True, GrabModeAsync, GrabModeAsync);
+		for (i = 0; i < LENGTH(keychords); i++)
+			if ((code = XKeysymToKeycode(dpy, keychords[i]->keys[currentkey].keysym)))
+				for (k = 0; k < LENGTH(modifiers); k++)
+					XGrabKey(dpy, code, keychords[i]->keys[currentkey].mod | modifiers[k], root,
+							 True, GrabModeAsync, GrabModeAsync);
+		if(currentkey > 0)
+			XGrabKey(dpy, XKeysymToKeycode(dpy, XK_Escape), AnyModifier, root, True, GrabModeAsync, GrabModeAsync);
 	}
 }
 
@@ -1243,17 +1250,50 @@ isuniquegeom(XineramaScreenInfo *unique, size_t n, XineramaScreenInfo *info)
 void
 keypress(XEvent *e)
 {
-	unsigned int i;
+	XEvent event = *e;
+	unsigned int ran = 0;
 	KeySym keysym;
 	XKeyEvent *ev;
 
-	ev = &e->xkey;
-	keysym = XKeycodeToKeysym(dpy, (KeyCode)ev->keycode, 0);
-	for (i = 0; i < LENGTH(keys); i++)
-		if (keysym == keys[i].keysym
-		&& CLEANMASK(keys[i].mod) == CLEANMASK(ev->state)
-		&& keys[i].func)
-			keys[i].func(&(keys[i].arg));
+	Keychord *arr1[sizeof(keychords) / sizeof(Keychord*)];
+	Keychord *arr2[sizeof(keychords) / sizeof(Keychord*)];
+	memcpy(arr1, keychords, sizeof(keychords));
+	Keychord **rpointer = arr1;
+	Keychord **wpointer = arr2;
+
+	size_t r = sizeof(keychords)/ sizeof(Keychord*);
+
+	while(1){
+		ev = &event.xkey;
+		keysym = XKeycodeToKeysym(dpy, (KeyCode)ev->keycode, 0);
+		size_t w = 0;
+		for (int i = 0; i < r; i++){
+			if(keysym == (*(rpointer + i))->keys[currentkey].keysym
+			   && CLEANMASK((*(rpointer + i))->keys[currentkey].mod) == CLEANMASK(ev->state)
+			   && (*(rpointer + i))->func){
+				if((*(rpointer + i))->n == currentkey +1){
+					(*(rpointer + i))->func(&((*(rpointer + i))->arg));
+					ran = 1;
+				}else{
+					*(wpointer + w) = *(rpointer + i);
+					w++;
+				}
+			}
+		}
+		currentkey++;
+		if(w == 0 || ran == 1)
+			break;
+		grabkeys();
+		while (running && !XNextEvent(dpy, &event) && !ran)
+			if(event.type == KeyPress)
+				break;
+		r = w;
+		Keychord **holder = rpointer;
+		rpointer = wpointer;
+		wpointer = holder;
+	}
+	currentkey = 0;
+	grabkeys();
 }
 
 void
