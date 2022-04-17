@@ -124,6 +124,16 @@ static Keychord *keychords[] = {
 	/* spawn new terminal */
 	&((Keychord){1, {{ MODKEY, XK_Return }},                                               spawn,                 {.v = termcmd } }),
 
+	/* spawn new browser session */
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_b }},                                  spawn,                 SHCMD("browser-clean") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_m }},                                  spawn,                 SHCMD("browser-google-main") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_a }},                                  spawn,                 SHCMD("browser-google-alt") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_n }},                                  spawn,                 SHCMD("$BROWSER --incognito") }),
+
+	&((Keychord){2, {{ MODKEY, XK_w }, { MODKEY, XK_w }},                                  spawn,                 SHCMD("lowriter --nologo") }),
+	&((Keychord){2, {{ MODKEY, XK_w }, { MODKEY, XK_e }},                                  spawn,                 SHCMD("localc --nologo") }),
+	&((Keychord){2, {{ MODKEY, XK_w }, { MODKEY, XK_p }},                                  spawn,                 SHCMD("loimpress --nologo") }),
+
 	/* toggle the bar */
 	&((Keychord){1, {{ MODKEY|ShiftMask, XK_b }},                                          togglebar,             {0} }),
 
