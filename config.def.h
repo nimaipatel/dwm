@@ -10,9 +10,9 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const int user_bh            = 30;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int focusonwheel       = 0;
 static const int viewontag         = 1;     /* Switch view on tag switch */
-static char font[]            = "monospace:size=12";
-static char dmenufont[]       = "monospace:size=8";
-static const char *fonts[]          = { font, "joypixels:size=10", "Symbols Nerd Font:size=20",  };
+static char font[]            = "monospace:size=18";
+static char dmenufont[]       = "monospace:size=18";
+static const char *fonts[]          = { font, "joypixels:size=14", "Symbols Nerd Font:size=18",  };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
