@@ -125,9 +125,8 @@ static Keychord *keychords[] = {
 	&((Keychord){1, {{ MODKEY, XK_Return }},                                               spawn,                 {.v = termcmd } }),
 
 	/* spawn new browser session */
-	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_b }},                                  spawn,                 SHCMD("browser-clean") }),
-	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_m }},                                  spawn,                 SHCMD("browser-google-main") }),
-	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_a }},                                  spawn,                 SHCMD("browser-google-alt") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_b }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=clean") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_a }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=google-alt") }),
 	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_n }},                                  spawn,                 SHCMD("$BROWSER --incognito") }),
 
 	&((Keychord){2, {{ MODKEY, XK_w }, { MODKEY, XK_w }},                                  spawn,                 SHCMD("lowriter --nologo") }),
