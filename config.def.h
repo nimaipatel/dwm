@@ -122,7 +122,7 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Keychord *keychords[] = {
 	/* spawn new terminal */
-	&((Keychord){1, {{ MODKEY, XK_Return }},                                               spawn,                 {.v = termcmd } }),
+	&((Keychord){1, {{ MODKEY, XK_Return }},                                               spawn,                 SHCMD("$TERMINAL") }),
 
 	/* spawn new browser session */
 	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_b }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=clean") }),
