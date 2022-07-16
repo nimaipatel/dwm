@@ -102,6 +102,8 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 	{ "HHH",      grid },
+	{ "TTT",      bstack },
+	{ "===",      bstackhoriz },
 };
 
 /* key definitions */
@@ -185,6 +187,7 @@ static Keychord *keychords[] = {
 	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_f }},                               setlayout,             {.v = &layouts[1]} }),
 	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_m }},                               setlayout,             {.v = &layouts[2]} }),
 	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_g }},                               setlayout,             {.v = &layouts[3]} }),
+	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_b }},                               setlayout,             {.v = &layouts[4]} }),
 	&((Keychord){2, {{ MODKEY, XK_space }, { MODKEY, XK_space }},                          setlayout,             {0} }),
 
 	/* floating windows */
@@ -197,18 +200,13 @@ static Keychord *keychords[] = {
 	&((Keychord){1, {{ MODKEY|ShiftMask, XK_period }},                                     tagmon,                {.i = +1 } }),
 
 	/* program launcher */
-	&((Keychord){1, {{ MODKEY, XK_d }},                                                    spawn,                 SHCMD("fzf-launcher") }),
+	&((Keychord){1, {{ MODKEY, XK_d }},                                                    spawn,                 SHCMD("dmenu_run") }),
 
 	/* password */
 	&((Keychord){1, {{ MODKEY, XK_p }},                                                    spawn,                 SHCMD("passmenu -p 'Select Password'") }),
 	
 	/* search for unicode characters */
 	&((Keychord){1, {{ MODKEY, XK_u }},                                                    spawn,                 SHCMD("unicode-selector") }),
-
-	&((Keychord){1, {{ MODKEY, XK_e }},                                                    spawn,                 SHCMD("st -e tmux new-session -As def") }),
-
-	/* search some websites for a term */
-	&((Keychord){1, {{ MODKEY, XK_s }},                                                    spawn,                 SHCMD("browser-search") }),
 
 	/* screenlock */
 	&((Keychord){1, {{ MODKEY, XK_q }},                                                    spawn,                 SHCMD("lockscreen") }),
