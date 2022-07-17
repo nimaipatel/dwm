@@ -63,11 +63,11 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = { "st", "-g", "200x45", "-n", "ncmpcpp", "-e", "spt", NULL };
+const char *spcmd1[] = { "st", "-g", "120x30", "-n", "mixer", "-e", "pulsemixer", NULL };
 const char *spcmd2[] = { "st", "-g", "120x40", "-n", "scratch", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
-	{"ncmpcpp",      spcmd1},
+	{"mixer",      spcmd1},
 	{"scratch",      spcmd2},
 };
 
@@ -80,7 +80,7 @@ static const Rule rules[] = {
 	 */
 	/* class        instance      title        tags mask     isfloating   monitor */
 	{ "Gimp",       NULL,         NULL,        0,            1,           -1 },
-	{ NULL,         "ncmpcpp",    NULL,        SPTAG(0),     1,           -1 },
+	{ NULL,         "mixer",      NULL,        SPTAG(0),     1,           -1 },
 	{ NULL,         "scratch",    NULL,        SPTAG(1),     1,           -1 },
 };
 
@@ -128,6 +128,7 @@ static Keychord *keychords[] = {
 
 	/* spawn new browser session */
 	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_b }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=clean") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_m }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=google-main") }),
 	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_a }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=google-alt") }),
 	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_n }},                                  spawn,                 SHCMD("$BROWSER --incognito") }),
 
@@ -149,8 +150,8 @@ static Keychord *keychords[] = {
 	/* TODO: handle this using signals */
 	&((Keychord){1, {{ MODKEY, XK_F12 }},                                                  xrdb,                  {.v = NULL } }),
 
-	/* toggle ncmpcpp in scratchpad */
-	&((Keychord){1, {{ MODKEY, XK_n }},                                                    togglescratch,         {.ui = 0 } }),
+	/* toggle pulsemixer in scratchpad */
+	&((Keychord){1, {{ MODKEY, XK_m }},                                                    togglescratch,         {.ui = 0 } }),
 
 	/* toggle scratchpad */
 	&((Keychord){1, {{ MODKEY, XK_slash }},                                                togglescratch,         {.ui = 1 } }),
@@ -228,7 +229,14 @@ static Keychord *keychords[] = {
 	/* selection + save to folder + copy to clipboard */
 	&((Keychord){1, {{ MODKEY|ShiftMask, XK_Print }},                                      spawn,                 SHCMD("scrot --line style=dash,width=3,color=\"red\" --select --exec 'xclip -selection clipboard -t image/png -i \"$f\" && mv \"$f\" ~/Pictures/screenshots && notify-send \"Saved $f and copied it to clipboard\"'") }),
 
+
+	/* notifications */
+	&((Keychord){2, {{ MODKEY, XK_n }, { MODKEY, XK_n }},                                  spawn,                 SHCMD("dunstctl close-all") }),
+	&((Keychord){2, {{ MODKEY, XK_n }, { MODKEY, XK_t }},                                  spawn,                 SHCMD("dunstctl close") }),
+	&((Keychord){2, {{ MODKEY, XK_n }, { MODKEY, XK_p }},                                  spawn,                 SHCMD("dunstctl history-pop") }),
+
 	/* brightness controls */
+	&((Keychord){1, {{ MODKEY, XK_c }},                                                    spawn,                 SHCMD("clight-recalib") }),
 	&((Keychord){1, {{ 0, XF86XK_MonBrightnessUp }},                                       spawn,                 SHCMD("brightnessctl set +1% ; pkill -RTMIN+19 dwmblocks") }),
 	&((Keychord){1, {{ 0, XF86XK_MonBrightnessDown }},                                     spawn,                 SHCMD("brightnessctl set 1%- ; pkill -RTMIN+19 dwmblocks") }),
 

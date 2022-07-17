@@ -1395,9 +1395,10 @@ manage(Window w, XWindowAttributes *wa)
 	grabbuttons(c, 0);
 	if (strcmp(c->name, "fzfmenu") == 0) {
 		// settings for fzfmenu window
+		c->w = c->mon->mw - borderpx * 2 - selmon->gappx * 2;
+		c->h = c->mon->mh * 0.5;
 		c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) - user_bh - selmon->gappx;
 		c->x = 0 + selmon->gappx;
-		c->w = c->mon->mw - borderpx * 2 - selmon->gappx * 2;
 		c->isfloating = 1;
 	} else {
 		c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) / 2;
