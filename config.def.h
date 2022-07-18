@@ -3,7 +3,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* gaps between windows */
+static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
@@ -80,6 +80,7 @@ static const Rule rules[] = {
 	 */
 	/* class        instance      title        tags mask     isfloating   monitor */
 	{ "Gimp",       NULL,         NULL,        0,            1,           -1 },
+	{ "scrcpy",     NULL,         NULL,        0,            1,           -1 },
 	{ NULL,         "mixer",      NULL,        SPTAG(0),     1,           -1 },
 	{ NULL,         "scratch",    NULL,        SPTAG(1),     1,           -1 },
 };
