@@ -131,7 +131,6 @@ struct Monitor {
 	int by;               /* bar geometry */
 	int mx, my, mw, mh;   /* screen size */
 	int wx, wy, ww, wh;   /* window area  */
-	int gappx;            /* gaps between windows */
 	unsigned int borderpx;
 	unsigned int seltags;
 	unsigned int sellt;
@@ -253,7 +252,6 @@ static void setborderpx(unsigned int borderpx);
 static void setclientstate(Client *c, long state);
 static void setfocus(Client *c);
 static void setfullscreen(Client *c, int fullscreen);
-static void setgaps(const Arg *arg);
 static void setlayout(const Arg *arg);
 static void setmfact(const Arg *arg);
 static void setup(void);
@@ -742,7 +740,6 @@ createmon(void)
 	m->showbar = showbar;
 	m->borderpx = borderpx;
 	m->topbar = topbar;
-	m->gappx = gappx;
 	m->lt[0] = &layouts[0];
 	m->lt[1] = &layouts[1 % LENGTH(layouts)];
 	strncpy(m->ltsymbol, layouts[0].symbol, sizeof m->ltsymbol);
@@ -1850,35 +1847,6 @@ setfullscreen(Client *c, int fullscreen)
 		resizeclient(c, c->x, c->y, c->w, c->h);
 		arrange(c->mon);
 	}
-}
-
-void
-setgaps(const Arg *arg)
-{
-	if (arg->i == 0) {
-		if (selmon->gappx == 0)
-			selmon->gappx = gappx;
-		else
-			selmon->gappx = 0;
-	} else if (selmon->gappx + arg->i < 0) {
-		selmon->gappx = 0;
-	} else {
-		selmon->gappx += arg->i;
-	}
-
-	if (selmon->gappx == 0) {
-		setborderpx(1);
-		char *cmd[] = { "killall", "picom", NULL };
-		Arg sparg = {.v = &cmd};
-		spawn(&sparg);
-	} else {
-		setborderpx(2);
-		char *cmd[] = { "picom", NULL };
-		Arg sparg = {.v = &cmd};
-		spawn(&sparg);
-	}
-
-	arrange(selmon);
 }
 
 void
