@@ -1,0 +1,758 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/nimai/dotfiles/DwmBloated/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210905.0/
+${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
+-0,0 +1,56	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -0,0 +1,56 @@$/;"	h	newFile:b/dwmswallow
+-0,0 +1,822	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -0,0 +1,822 @@$/;"	h	newFile:b/vanitygaps.c
+-1,21 +1,23	patches/dwm-xresources-20210314.diff	/^@@ -1,21 +1,23 @@$/;"	h	modifiedFile:a/config.def.h
+-102,9 +102,14	patches/dwm-keychord-6.2.diff	/^@@ -102,9 +102,14 @@ struct Client {$/;"	h	modifiedFile:a/dwm.c
+-1029,6 +1031,7	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -1029,6 +1031,7 @@ manage(Window w, XWindowAttributes *wa)$/;"	h	modifiedFile:a/dwm.c
+-1057,6 +1057,8	patches/dwm-alwayscenter-20200625-f04cac6.diff	/^@@ -1057,6 +1057,8 @@ manage(Window w, XWindowAttributes *wa)$/;"	h	modifiedFile:dwm/dwm.c
+-106,7 +126,7	patches/dwm-scratchpads-20200414-728d397b.diff	/^@@ -106,7 +126,7 @@ static Button buttons[] = {$/;"	h	modifiedFile:a/config.def.h
+-107,6 +113,7	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -107,6 +113,7 @@ static Button buttons[] = {$/;"	h	modifiedFile:a/config.def.h
+-1090,15 +1214,37	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -1090,15 +1214,37 @@ mappingnotify(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
+-111,6 +111,7	patches/dwm-pertag-perseltag-6.2.diff	/^@@ -111,6 +111,7 @@ typedef struct {$/;"	h	modifiedFile:a/dwm.c
+-1116,23 +1094,6	patches/dwm-focusonclick-20200110-61bb8b2.diff	/^@@ -1116,23 +1094,6 @@ monocle(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
+-1163,6 +1169,22	patches/dwm-status2d-xrdb-6.2.diff	/^@@ -1163,6 +1169,22 @@ loadxrdb()$/;"	h	modifiedFile:a/dwm.c
+-119,6 +119,7	patches/dwm-fullgaps-20200508-7b77734.diff	/^@@ -119,6 +119,7 @@ struct Monitor {$/;"	h	modifiedFile:a/dwm.c
+-12,6 +12,7	patches/dwm-r1522-viewontag.diff	/^@@ -12,6 +12,7 @@$/;"	h	modifiedFile:a/config.def.h
+-120,6 +120,10	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -120,6 +120,10 @@ struct Monitor {$/;"	h	modifiedFile:a/dwm.c
+-1214,11 +1360,13	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -1214,11 +1360,13 @@ propertynotify(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
+-1240,6 +1388,9	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -1240,6 +1388,9 @@ propertynotify(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
+-1248,6 +1251,7	patches/dwm-restartsig-20180523-6.2.diff	/^@@ -1248,6 +1251,7 @@ propertynotify(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
+-13,6 +13,40	patches/dwm-status2d-xrdb-6.2.diff	/^@@ -13,6 +13,40 @@ static char normfgcolor[]           = "#bbbbbb";$/;"	h	modifiedFile:a/config.def.h
+-130,6 +131,7	patches/dwm-pertag-perseltag-6.2.diff	/^@@ -130,6 +131,7 @@ struct Monitor {$/;"	h	modifiedFile:a/dwm.c
+-140,6 +140,16	patches/dwm-fullgaps-20200508-7b77734.diff	/^@@ -140,6 +140,16 @@ View all windows with any tag.$/;"	h	modifiedFile:a/dwm.1
+-141,6 +142,19	patches/dwm-xresources-20210314.diff	/^@@ -141,6 +142,19 @@ typedef struct {$/;"	h	modifiedFile:a/dwm.c
+-141,6 +143,28	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -141,6 +143,28 @@ typedef struct {$/;"	h	modifiedFile:a/dwm.c
+-142,6 +142,9	patches/dwm-restartsig-20180523-6.2.diff	/^@@ -142,6 +142,9 @@ Add\/remove all windows with nth tag to\/from the view.$/;"	h	modifiedFile:a/dwm.1
+-1498,6 +1501,16	patches/dwm-fullgaps-20200508-7b77734.diff	/^@@ -1498,6 +1501,16 @@ setfullscreen(Client *c, int fullscreen)$/;"	h	modifiedFile:a/dwm.c
+-1500,11 +1535,26	patches/dwm-pertag-perseltag-6.2.diff	/^@@ -1500,11 +1535,26 @@ setfullscreen(Client *c, int fullscreen)$/;"	h	modifiedFile:a/dwm.c
+-1511,6 +1514,24	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -1511,6 +1514,24 @@ setlayout(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
+-1516,13 +1566,24	patches/dwm-pertag-perseltag-6.2.diff	/^@@ -1516,13 +1566,24 @@ void$/;"	h	modifiedFile:a/dwm.c
+-1536,6 +1540,9	patches/dwm-restartsig-20180523-6.2.diff	/^@@ -1536,6 +1540,9 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
+-1545,7 +1545,7	patches/dwm-bar-height-6.2.diff	/^@@ -1545,7 +1545,7 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
+-155,6 +158,13	patches/dwm-restartsig-20180523-6.2.diff	/^@@ -155,6 +158,13 @@ Resize focused window while dragging. Tiled windows will be toggled to the /;"	h	modifiedFile:a/dwm.1
+-1567,6 +1718,7	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -1567,6 +1718,7 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
+-1568,7 +1675,8	patches/dwm-status2d-20200508-60bb3df.diff	/^@@ -1568,7 +1675,8 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
+-1613,6 +1613,8	patches/dwm-r1522-viewontag.diff	/^@@ -1613,6 +1613,8 @@$/;"	h	modifiedFile:a/dwm.c
+-1616,6 +1625,10	patches/dwm-scratchpads-20200414-728d397b.diff	/^@@ -1616,6 +1625,10 @@ showhide(Client *c)$/;"	h	modifiedFile:a/dwm.c
+-163,6 +163,7	patches/dwm-status2d-20200508-60bb3df.diff	/^@@ -163,6 +163,7 @@ static void detachstack(Client *c);$/;"	h	modifiedFile:a/dwm.c
+-163,7 +163,6	patches/dwm-focusonclick-20200110-61bb8b2.diff	/^@@ -163,7 +163,6 @@ static void detachstack(Client *c);$/;"	h	modifiedFile:a/dwm.c
+-1637,6 +1644,20	patches/dwm-restartsig-20180523-6.2.diff	/^@@ -1637,6 +1644,20 @@ sigchld(int unused)$/;"	h	modifiedFile:a/dwm.c
+-165,6 +189,7	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -165,6 +189,7 @@ static void drawbar(Monitor *m);$/;"	h	modifiedFile:a/dwm.c
+-1653,6 +1805,335	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -1653,6 +1805,335 @@ spawn(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
+-1674,9 +1695,15	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -1674,9 +1695,15 @@ void$/;"	h	modifiedFile:a/dwm.c
+-1684,18 +1697,18	patches/dwm-fullgaps-20200508-7b77734.diff	/^@@ -1684,18 +1697,18 @@ tile(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
+-1686,13 +1713,15	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -1686,13 +1713,15 @@ tile(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
+-1691,40 +1698,6	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -1691,40 +1698,6 @@ tagmon(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
+-1699,7 +1760,16	patches/dwm-pertag-perseltag-6.2.diff	/^@@ -1699,7 +1760,16 @@ tile(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
+-1719,6 +1732,32	patches/dwm-scratchpads-20200414-728d397b.diff	/^@@ -1719,6 +1732,32 @@ togglefloating(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
+-1738,9 +1808,33	patches/dwm-pertag-perseltag-6.2.diff	/^@@ -1738,9 +1808,33 @@ void$/;"	h	modifiedFile:a/dwm.c
+-175,6 +175,7	patches/dwm-inplacerotate-6.2.diff	/^@@ -175,6 +175,7 @@ static int gettextprop(Window w, Atom atom, char *text, unsigned int size);$/;"	h	modifiedFile:a/dwm.c
+-1768,6 +2249,9	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -1768,6 +2249,9 @@ unmanage(Client *c, int destroyed)$/;"	h	modifiedFile:a/dwm.c
+-1790,14 +2274,27	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -1790,14 +2274,27 @@ unmanage(Client *c, int destroyed)$/;"	h	modifiedFile:a/dwm.c
+-18,17 +18,33	patches/dwm-scratchpads-20200414-728d397b.diff	/^@@ -18,17 +18,33 @@ static const char *colors[][3]      = {$/;"	h	modifiedFile:a/config.def.h
+-182,7 +181,6	patches/dwm-focusonclick-20200110-61bb8b2.diff	/^@@ -182,7 +181,6 @@ static void manage(Window w, XWindowAttributes *wa);$/;"	h	modifiedFile:a/dwm.c
+-1839,15 +2336,19	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -1839,15 +2336,19 @@ updatebarpos(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
+-2,6 +2,7	patches/dwm-fullgaps-20200508-7b77734.diff	/^@@ -2,6 +2,7 @@$/;"	h	modifiedFile:a/config.def.h
+-200,6 +201,7	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -200,6 +201,7 @@ static void setclientstate(Client *c, long state);$/;"	h	modifiedFile:a/dwm.c
+-200,6 +201,7	patches/dwm-fullgaps-20200508-7b77734.diff	/^@@ -200,6 +201,7 @@ static void sendmon(Client *c, Monitor *m);$/;"	h	modifiedFile:a/dwm.c
+-2035,11 +2129,37	patches/dwm-pertag-perseltag-6.2.diff	/^@@ -2035,11 +2129,37 @@ updatewmhints(Client *c)$/;"	h	modifiedFile:a/dwm.c
+-205,6 +205,8	patches/dwm-restartsig-20180523-6.2.diff	/^@@ -205,6 +205,8 @@ static void setup(void);$/;"	h	modifiedFile:a/dwm.c
+-2060,6 +2561,43	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -2060,6 +2561,43 @@ wintoclient(Window w)$/;"	h	modifiedFile:a/dwm.c
+-207,6 +232,16	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -207,6 +232,16 @@ static void seturgent(Client *c, int urg);$/;"	h	modifiedFile:a/dwm.c
+-208,7 +208,7	patches/dwm-xresources-20210314.diff	/^@@ -208,7 +208,7 @@ drw_clr_create(Drw *drw, Clr *dest, const char *clrname)$/;"	h	modifiedFile:a/drw.c
+-210,7 +214,6	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -210,7 +214,6 @@ static void sigchld(int unused);$/;"	h	modifiedFile:a/dwm.c
+-211,6 +214,7	patches/dwm-scratchpads-20200414-728d397b.diff	/^@@ -211,6 +214,7 @@ static void tagmon(const Arg *arg);$/;"	h	modifiedFile:a/dwm.c
+-2127,6 +2143,60	patches/dwm-xresources-20210314.diff	/^@@ -2127,6 +2143,60 @@ zoom(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
+-2139,6 +2160,7	patches/dwm-restartsig-20180523-6.2.diff	/^@@ -2139,6 +2160,7 @@ main(int argc, char *argv[])$/;"	h	modifiedFile:a/dwm.c
+-2139,6 +2209,8	patches/dwm-xresources-20210314.diff	/^@@ -2139,6 +2209,8 @@ main(int argc, char *argv[])$/;"	h	modifiedFile:a/dwm.c
+-2147,3 +2148,61	patches/dwm-inplacerotate-6.2.diff	/^@@ -2147,3 +2148,61 @@ main(int argc, char *argv[])$/;"	h	modifiedFile:a/dwm.c
+-229,6 +264,7	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -229,6 +264,7 @@ static void updatewindowtype(Client *c);$/;"	h	modifiedFile:a/dwm.c
+-234,6 +248,8	patches/dwm-xresources-20210314.diff	/^@@ -234,6 +248,8 @@ static int xerror(Display *dpy, XErrorEvent *ee);$/;"	h	modifiedFile:a/dwm.c
+-237,7 +238,7	patches/dwm-status2d-20200508-60bb3df.diff	/^@@ -237,7 +238,7 @@ static void zoom(const Arg *arg);$/;"	h	modifiedFile:a/dwm.c
+-250,13 +248,11	patches/dwm-focusonclick-20200110-61bb8b2.diff	/^@@ -250,13 +248,11 @@ static void (*handler[LASTEvent]) (XEvent *) = {$/;"	h	modifiedFile:a/dwm.c
+-260,6 +262,7	patches/dwm-restartsig-20180523-6.2.diff	/^@@ -260,6 +262,7 @@ static void (*handler[LASTEvent]) (XEvent *) = {$/;"	h	modifiedFile:a/dwm.c
+-267,6 +303,7	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -267,6 +303,7 @@ static Clr **scheme;$/;"	h	modifiedFile:a/dwm.c
+-268,6 +273,7	patches/dwm-keychord-6.2.diff	/^@@ -268,6 +273,7 @@ static Display *dpy;$/;"	h	modifiedFile:a/dwm.c
+-271,6 +273,15	patches/dwm-pertag-perseltag-6.2.diff	/^@@ -271,6 +273,15 @@ static Window root, wmcheckwin;$/;"	h	modifiedFile:a/dwm.c
+-299,6 +303,11	patches/dwm-scratchpads-20200414-728d397b.diff	/^@@ -299,6 +303,11 @@ applyrules(Client *c)$/;"	h	modifiedFile:a/dwm.c
+-3,6 +3,11	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -3,6 +3,11 @@$/;"	h	modifiedFile:a/config.def.h
+-308,7 +317,7	patches/dwm-scratchpads-20200414-728d397b.diff	/^@@ -308,7 +317,7 @@ applyrules(Client *c)$/;"	h	modifiedFile:a/dwm.c
+-31,6 +31,11	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -31,6 +31,11 @@ static const Rule rules[] = {$/;"	h	modifiedFile:a/config.def.h
+-32,9 +34,9	patches/dwm-xresources-20210314.diff	/^@@ -32,9 +34,9 @@ static const Rule rules[] = {$/;"	h	modifiedFile:a/config.def.h
+-33,3 +33,33	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -33,3 +33,33 @@ die(const char *fmt, ...) {$/;"	h	modifiedFile:a/util.c
+-36,11 +41,26	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -36,11 +41,26 @@ static const float mfact     = 0.55; \/* factor of master area size [0.05..0/;"	h	modifiedFile:a/config.def.h
+-36,6 +36,7	patches/dwm-xresources-20210314.diff	/^@@ -36,6 +36,7 @@$/;"	h	modifiedFile:a/dwm.c
+-39,7 +39,7	patches/dwm-xresources-20210314.diff	/^@@ -39,7 +39,7 @@ void drw_font_getexts(Fnt *font, const char *text, unsigned int len, unsigned /;"	h	modifiedFile:a/drw.h
+-40,12 +40,15	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -40,12 +40,15 @@ install: all$/;"	h	modifiedFile:a/Makefile
+-416,7 +416,7	patches/dwm-hide_vacant_tags-6.2.diff	/^@@ -416,7 +416,7 @@ attachstack(Client *c)$/;"	h	modifiedFile:a/dwm.c
+-425,7 +421,8	patches/dwm-focusonclick-20200110-61bb8b2.diff	/^@@ -425,7 +421,8 @@ buttonpress(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
+-431,9 +431,14	patches/dwm-hide_vacant_tags-6.2.diff	/^@@ -431,9 +431,14 @@ buttonpress(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
+-445,8 +442,8	patches/dwm-focusonclick-20200110-61bb8b2.diff	/^@@ -445,8 +442,8 @@ buttonpress(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
+-46,11 +46,11	patches/dwm-keychord-6.2.diff	/^@@ -46,11 +46,11 @@ static const Layout layouts[] = {$/;"	h	modifiedFile:a/config.def.h
+-485,7 +486,7	patches/dwm-status2d-20200508-60bb3df.diff	/^@@ -485,7 +486,7 @@ cleanup(void)$/;"	h	modifiedFile:a/dwm.c
+-5,6 +5,7	patches/dwm-bar-height-6.2.diff	/^@@ -5,6 +5,7 @@ static const unsigned int borderpx  = 1;        \/* border pixel of windows *\/$/;"	h	modifiedFile:a/config.def.h
+-5,6 +5,7	patches/dwm-focusonclick-20200110-61bb8b2.diff	/^@@ -5,6 +5,7 @@ static const unsigned int borderpx  = 1;        \/* border pixel of windows *\/$/;"	h	modifiedFile:a/config.def.h
+-54,7 +54,10	patches/dwm-scratchpads-20200414-728d397b.diff	/^@@ -54,7 +54,10 @@$/;"	h	modifiedFile:a/dwm.c
+-56,9 +58,30	patches/dwm-xresources-20210314.diff	/^@@ -56,9 +58,30 @@ static const Layout layouts[] = {$/;"	h	modifiedFile:a/config.def.h
+-58,7 +58,7	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -58,7 +58,7 @@$/;"	h	modifiedFile:a/dwm.c
+-584,10 +621,12	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -584,10 +621,12 @@ configurerequest(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
+-59,6 +75,7	patches/dwm-scratchpads-20200414-728d397b.diff	/^@@ -59,6 +75,7 @@ static char dmenumon[2] = "0"; \/* component of dmenucmd, manipulated in spawn/;"	h	modifiedFile:a/config.def.h
+-6,3 +6,4	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -6,3 +6,4 @@$/;"	h	modifiedFile:a/util.h
+-60,31 +60,32	patches/dwm-keychord-6.2.diff	/^@@ -60,31 +60,32 @@ static char dmenumon[2] = "0"; \/* component of dmenucmd, manipulated in spa/;"	h	modifiedFile:a/config.def.h
+-615,7 +654,13	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -615,7 +654,13 @@ configurerequest(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
+-624,6 +669,7	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -624,6 +669,7 @@ configurerequest(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
+-631,6 +642,7	patches/dwm-pertag-perseltag-6.2.diff	/^@@ -631,6 +642,7 @@ Monitor *$/;"	h	modifiedFile:a/dwm.c
+-639,6 +641,7	patches/dwm-fullgaps-20200508-7b77734.diff	/^@@ -639,6 +641,7 @@ createmon(void)$/;"	h	modifiedFile:a/dwm.c
+-640,6 +643,10	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -640,6 +643,10 @@ createmon(void)$/;"	h	modifiedFile:a/dwm.c
+-641,6 +653,20	patches/dwm-pertag-perseltag-6.2.diff	/^@@ -641,6 +653,20 @@ createmon(void)$/;"	h	modifiedFile:a/dwm.c
+-648,11 +694,30	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -648,11 +694,30 @@ createmon(void)$/;"	h	modifiedFile:a/dwm.c
+-66,6 +66,10	patches/dwm-inplacerotate-6.2.diff	/^@@ -66,6 +66,10 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
+-66,6 +66,7	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -66,6 +66,7 @@ enum { NetSupported, NetWMName, NetWMState, NetWMCheck,$/;"	h	modifiedFile:a/dwm.c
+-693,6 +694,114	patches/dwm-status2d-20200508-60bb3df.diff	/^@@ -693,6 +694,114 @@ dirtomon(int dir)$/;"	h	modifiedFile:a/dwm.c
+-70,6 +70,9	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -70,6 +70,9 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
+-704,9 +813,7	patches/dwm-status2d-20200508-60bb3df.diff	/^@@ -704,9 +813,7 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
+-709,19 +714,19	patches/dwm-hide_vacant_tags-6.2.diff	/^@@ -709,19 +714,19 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
+-729,6 +794,12	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -729,6 +794,12 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
+-74,6 +94,22	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -74,6 +94,22 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
+-752,25 +749,6	patches/dwm-focusonclick-20200110-61bb8b2.diff	/^@@ -752,25 +749,6 @@ drawbars(void)$/;"	h	modifiedFile:a/dwm.c
+-781,6 +852,59	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -781,6 +852,59 @@ expose(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
+-784,6 +784,12	patches/dwm-status2d-xrdb-6.2.diff	/^@@ -784,6 +784,12 @@ drawstatusbar(Monitor *m, int bh, char* stext) {$/;"	h	modifiedFile:a/dwm.c
+-84,6 +101,9	patches/dwm-scratchpads-20200414-728d397b.diff	/^@@ -84,6 +101,9 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
+-84,6 +85,9	patches/dwm-fullgaps-20200508-7b77734.diff	/^@@ -84,6 +85,9 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
+-84,6 +89,7	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -84,6 +89,7 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
+-87,6 +87,7	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^@@ -87,6 +87,7 @@ typedef struct Client Client;$/;"	h	modifiedFile:a/dwm.c
+-94,6 +94,7	patches/dwm-restartsig-20180523-6.2.diff	/^@@ -94,6 +94,7 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
+-94,7 +95,7	patches/dwm-keychord-6.2.diff	/^@@ -94,7 +95,7 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
+-95,6 +96,7	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^@@ -95,6 +96,7 @@ struct Client {$/;"	h	modifiedFile:a/dwm.c
+-954,16 +960,17	patches/dwm-keychord-6.2.diff	/^@@ -954,16 +960,17 @@ grabkeys(void)$/;"	h	modifiedFile:a/dwm.c
+-966,7 +992,16	patches/dwm-pertag-perseltag-6.2.diff	/^@@ -966,7 +992,16 @@ grabkeys(void)$/;"	h	modifiedFile:a/dwm.c
+-989,17 +996,50	patches/dwm-keychord-6.2.diff	/^@@ -989,17 +996,50 @@ isuniquegeom(XineramaScreenInfo *unique, size_t n, XineramaScreenInfo *inf/;"	h	modifiedFile:a/dwm.c
+.c.o	Makefile	/^.c.o:$/;"	t
+Arg	dwm.c	/^} Arg;$/;"	t	typeref:union:__anon0f53a99e070a	file:
+BETWEEN	util.h	/^#define BETWEEN(/;"	d
+BUGS	dwm.1	/^.SH BUGS$/;"	s	title:DWM
+BUTTONMASK	dwm.c	/^#define BUTTONMASK /;"	d	file:
+Build	README.md	/^## Build$/;"	s	chapter:dwm - dynamic window manager
+Button	dwm.c	/^} Button;$/;"	t	typeref:struct:__anon0f53a99e0808	file:
+CC	config.mk	/^CC = cc$/;"	m
+CFLAGS	config.mk	/^CFLAGS   = -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os ${INCS} ${CPPFLAGS}$/;"	m
+CLEANMASK	dwm.c	/^#define CLEANMASK(/;"	d	file:
+CPPFLAGS	config.mk	/^CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L -DVERSION=\\"${VERSION}\\" /;"	m
+CUSTOMIZATION	dwm.1	/^.SH CUSTOMIZATION$/;"	s	title:DWM
+Client	dwm.c	/^struct Client {$/;"	s	file:
+Client	dwm.c	/^typedef struct Client Client;$/;"	t	typeref:struct:Client	file:
+ClientRegular	dwm.c	/^enum { ClientRegular = 1, ClientSwallowee, ClientSwallower }; \/* client types *\/$/;"	e	enum:__anon0f53a99e0603	file:
+ClientSwallowee	dwm.c	/^enum { ClientRegular = 1, ClientSwallowee, ClientSwallower }; \/* client types *\/$/;"	e	enum:__anon0f53a99e0603	file:
+ClientSwallower	dwm.c	/^enum { ClientRegular = 1, ClientSwallowee, ClientSwallower }; \/* client types *\/$/;"	e	enum:__anon0f53a99e0603	file:
+ClkClientWin	dwm.c	/^       ClkClientWin, ClkRootWin, ClkLast }; \/* clicks *\/$/;"	e	enum:__anon0f53a99e0503	file:
+ClkLast	dwm.c	/^       ClkClientWin, ClkRootWin, ClkLast }; \/* clicks *\/$/;"	e	enum:__anon0f53a99e0503	file:
+ClkLtSymbol	dwm.c	/^enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,$/;"	e	enum:__anon0f53a99e0503	file:
+ClkRootWin	dwm.c	/^       ClkClientWin, ClkRootWin, ClkLast }; \/* clicks *\/$/;"	e	enum:__anon0f53a99e0503	file:
+ClkStatusText	dwm.c	/^enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,$/;"	e	enum:__anon0f53a99e0503	file:
+ClkTagBar	dwm.c	/^enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,$/;"	e	enum:__anon0f53a99e0503	file:
+ClkWinTitle	dwm.c	/^enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,$/;"	e	enum:__anon0f53a99e0503	file:
+Clr	drw.h	/^typedef XftColor Clr;$/;"	t	typeref:typename:XftColor
+ColBg	drw.h	/^enum { ColFg, ColBg, ColBorder }; \/* Clr scheme index *\/$/;"	e	enum:__anon0f5116480203
+ColBorder	drw.h	/^enum { ColFg, ColBg, ColBorder }; \/* Clr scheme index *\/$/;"	e	enum:__anon0f5116480203
+ColFg	drw.h	/^enum { ColFg, ColBg, ColBorder }; \/* Clr scheme index *\/$/;"	e	enum:__anon0f5116480203
+Cur	drw.h	/^} Cur;$/;"	t	typeref:struct:__anon0f5116480108
+CurLast	dwm.c	/^enum { CurNormal, CurResize, CurMove, CurSwal, CurLast }; \/* cursor *\/$/;"	e	enum:__anon0f53a99e0103	file:
+CurMove	dwm.c	/^enum { CurNormal, CurResize, CurMove, CurSwal, CurLast }; \/* cursor *\/$/;"	e	enum:__anon0f53a99e0103	file:
+CurNormal	dwm.c	/^enum { CurNormal, CurResize, CurMove, CurSwal, CurLast }; \/* cursor *\/$/;"	e	enum:__anon0f53a99e0103	file:
+CurResize	dwm.c	/^enum { CurNormal, CurResize, CurMove, CurSwal, CurLast }; \/* cursor *\/$/;"	e	enum:__anon0f53a99e0103	file:
+CurSwal	dwm.c	/^enum { CurNormal, CurResize, CurMove, CurSwal, CurLast }; \/* cursor *\/$/;"	e	enum:__anon0f53a99e0103	file:
+DESCRIPTION	dwm.1	/^.SH DESCRIPTION$/;"	s	title:DWM
+DWM	dwm.1	/^.TH DWM 1 dwm\\-VERSION$/;"	t
+Drw	drw.h	/^} Drw;$/;"	t	typeref:struct:__anon0f5116480308
+EOF	dwmswallow	/^	cat <<EOF$/;"	h
+FLOAT	dwm.c	/^	FLOAT = 2$/;"	e	enum:resource_type	file:
+FORCE_VSPLIT	config.def.h	/^#define FORCE_VSPLIT /;"	d
+FORCE_VSPLIT	config.h	/^#define FORCE_VSPLIT /;"	d
+FREETYPEINC	config.mk	/^FREETYPEINC = \/usr\/include\/freetype2$/;"	m
+FREETYPELIBS	config.mk	/^FREETYPELIBS = -lfontconfig -lXft$/;"	m
+Features	README.md	/^## Features$/;"	s	chapter:dwm - dynamic window manager
+Fnt	drw.h	/^typedef struct Fnt {$/;"	s
+Fnt	drw.h	/^} Fnt;$/;"	t	typeref:struct:Fnt
+HEIGHT	dwm.c	/^#define HEIGHT(/;"	d	file:
+INCS	config.mk	/^INCS = -I${X11INC} -I${FREETYPEINC}$/;"	m
+INTEGER	dwm.c	/^	INTEGER = 1,$/;"	e	enum:resource_type	file:
+INTERSECT	dwm.c	/^#define INTERSECT(/;"	d	file:
+ISSUES	dwm.1	/^.SH ISSUES$/;"	s	title:DWM
+ISVISIBLE	dwm.c	/^#define ISVISIBLE(/;"	d	file:
+Key	dwm.c	/^} Key;$/;"	t	typeref:struct:__anon0f53a99e0908	file:
+Keychord	dwm.c	/^} Keychord;$/;"	t	typeref:struct:__anon0f53a99e0a08	file:
+LDFLAGS	config.mk	/^LDFLAGS  = ${LIBS}$/;"	m
+LENGTH	dwm.c	/^#define LENGTH(/;"	d	file:
+LIBS	config.mk	/^LIBS = -L${X11LIB} -lX11 ${XINERAMALIBS} ${FREETYPELIBS}$/;"	m
+Layout	dwm.c	/^} Layout;$/;"	t	typeref:struct:__anon0f53a99e0b08	file:
+MANPREFIX	config.mk	/^MANPREFIX = ${PREFIX}\/share\/man$/;"	m
+MAX	util.h	/^#define MAX(/;"	d
+MIN	util.h	/^#define MIN(/;"	d
+MODKEY	config.def.h	/^#define MODKEY /;"	d
+MODKEY	config.h	/^#define MODKEY /;"	d
+MOUSEMASK	dwm.c	/^#define MOUSEMASK /;"	d	file:
+Monitor	dwm.c	/^struct Monitor {$/;"	s	file:
+Monitor	dwm.c	/^typedef struct Monitor Monitor;$/;"	t	typeref:struct:Monitor	file:
+NAME	dwm.1	/^.SH NAME$/;"	s	title:DWM
+NUMTAGS	dwm.c	/^#define NUMTAGS	/;"	d	file:
+NetActiveWindow	dwm.c	/^       NetWMFullscreen, NetActiveWindow, NetWMWindowType,$/;"	e	enum:__anon0f53a99e0303	file:
+NetClientList	dwm.c	/^       NetWMWindowTypeDialog, NetClientList, NetLast }; \/* EWMH atoms *\/$/;"	e	enum:__anon0f53a99e0303	file:
+NetLast	dwm.c	/^       NetWMWindowTypeDialog, NetClientList, NetLast }; \/* EWMH atoms *\/$/;"	e	enum:__anon0f53a99e0303	file:
+NetSupported	dwm.c	/^enum { NetSupported, NetWMName, NetWMState, NetWMCheck,$/;"	e	enum:__anon0f53a99e0303	file:
+NetWMCheck	dwm.c	/^enum { NetSupported, NetWMName, NetWMState, NetWMCheck,$/;"	e	enum:__anon0f53a99e0303	file:
+NetWMFullscreen	dwm.c	/^       NetWMFullscreen, NetActiveWindow, NetWMWindowType,$/;"	e	enum:__anon0f53a99e0303	file:
+NetWMName	dwm.c	/^enum { NetSupported, NetWMName, NetWMState, NetWMCheck,$/;"	e	enum:__anon0f53a99e0303	file:
+NetWMState	dwm.c	/^enum { NetSupported, NetWMName, NetWMState, NetWMCheck,$/;"	e	enum:__anon0f53a99e0303	file:
+NetWMWindowType	dwm.c	/^       NetWMFullscreen, NetActiveWindow, NetWMWindowType,$/;"	e	enum:__anon0f53a99e0303	file:
+NetWMWindowTypeDialog	dwm.c	/^       NetWMWindowTypeDialog, NetClientList, NetLast }; \/* EWMH atoms *\/$/;"	e	enum:__anon0f53a99e0303	file:
+NumTags	dwm.c	/^struct NumTags { char limitexceeded[LENGTH(tags) > 31 ? -1 : 1]; };$/;"	s	file:
+OBJ	Makefile	/^OBJ = ${SRC:.c=.o}$/;"	m
+OPTIONS	dwm.1	/^.SH OPTIONS$/;"	s	title:DWM
+PREFIX	config.mk	/^PREFIX = \/usr\/local$/;"	m
+Pertag	dwm.c	/^struct Pertag {$/;"	s	file:
+Pertag	dwm.c	/^typedef struct Pertag Pertag;$/;"	t	typeref:struct:Pertag	file:
+ResourcePref	dwm.c	/^} ResourcePref;$/;"	t	typeref:struct:__anon0f53a99e0d08	file:
+Rule	dwm.c	/^} Rule;$/;"	t	typeref:struct:__anon0f53a99e0c08	file:
+SEE	dwm.1	/^.SH SEE ALSO$/;"	s	title:DWM
+SHCMD	config.def.h	/^#define SHCMD(/;"	d
+SHCMD	config.h	/^#define SHCMD(/;"	d
+SIGNALS	dwm.1	/^.SH SIGNALS$/;"	s	title:DWM
+SPTAG	dwm.c	/^#define SPTAG(/;"	d	file:
+SPTAGMASK	dwm.c	/^#define SPTAGMASK /;"	d	file:
+SRC	Makefile	/^SRC = drw.c dwm.c util.c$/;"	m
+STRING	dwm.c	/^	STRING = 0,$/;"	e	enum:resource_type	file:
+SYNOPSIS	dwm.1	/^.SH SYNOPSIS$/;"	s	title:DWM
+SchemeNorm	dwm.c	/^enum { SchemeNorm, SchemeSel }; \/* color schemes *\/$/;"	e	enum:__anon0f53a99e0203	file:
+SchemeSel	dwm.c	/^enum { SchemeNorm, SchemeSel }; \/* color schemes *\/$/;"	e	enum:__anon0f53a99e0203	file:
+Sp	config.def.h	/^} Sp;$/;"	t	typeref:struct:__anon9258968e0108
+Sp	config.h	/^} Sp;$/;"	t	typeref:struct:__anon41b17d910108
+Swallow	dwm.c	/^struct Swallow {$/;"	s	file:
+Swallow	dwm.c	/^typedef struct Swallow Swallow;$/;"	t	typeref:struct:Swallow	file:
+TAGKEYS	config.def.h	/^#define TAGKEYS(/;"	d
+TAGKEYS	config.h	/^#define TAGKEYS(/;"	d
+TAGMASK	dwm.c	/^#define TAGMASK /;"	d	file:
+TEXTW	dwm.c	/^#define TEXTW(/;"	d	file:
+USAGE	dwm.1	/^.SH USAGE$/;"	s	title:DWM
+UTF_INVALID	drw.c	/^#define UTF_INVALID /;"	d	file:
+UTF_SIZ	drw.c	/^#define UTF_SIZ /;"	d	file:
+VERSION	config.mk	/^VERSION = 6.2$/;"	m
+WIDTH	dwm.c	/^#define WIDTH(/;"	d	file:
+WMDelete	dwm.c	/^enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; \/* default atoms *\/$/;"	e	enum:__anon0f53a99e0403	file:
+WMLast	dwm.c	/^enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; \/* default atoms *\/$/;"	e	enum:__anon0f53a99e0403	file:
+WMProtocols	dwm.c	/^enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; \/* default atoms *\/$/;"	e	enum:__anon0f53a99e0403	file:
+WMState	dwm.c	/^enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; \/* default atoms *\/$/;"	e	enum:__anon0f53a99e0403	file:
+WMTakeFocus	dwm.c	/^enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; \/* default atoms *\/$/;"	e	enum:__anon0f53a99e0403	file:
+X11INC	config.mk	/^X11INC = \/usr\/X11R6\/include$/;"	m
+X11LIB	config.mk	/^X11LIB = \/usr\/X11R6\/lib$/;"	m
+XINERAMAFLAGS	config.mk	/^XINERAMAFLAGS = -DXINERAMA$/;"	m
+XINERAMALIBS	config.mk	/^XINERAMALIBS  = -lXinerama$/;"	m
+__anon0f5116480108	drw.h	/^typedef struct {$/;"	s
+__anon0f5116480203	drw.h	/^enum { ColFg, ColBg, ColBorder }; \/* Clr scheme index *\/$/;"	g
+__anon0f5116480308	drw.h	/^typedef struct {$/;"	s
+__anon0f53a99e0103	dwm.c	/^enum { CurNormal, CurResize, CurMove, CurSwal, CurLast }; \/* cursor *\/$/;"	g	file:
+__anon0f53a99e0203	dwm.c	/^enum { SchemeNorm, SchemeSel }; \/* color schemes *\/$/;"	g	file:
+__anon0f53a99e0303	dwm.c	/^enum { NetSupported, NetWMName, NetWMState, NetWMCheck,$/;"	g	file:
+__anon0f53a99e0403	dwm.c	/^enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; \/* default atoms *\/$/;"	g	file:
+__anon0f53a99e0503	dwm.c	/^enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,$/;"	g	file:
+__anon0f53a99e0603	dwm.c	/^enum { ClientRegular = 1, ClientSwallowee, ClientSwallower }; \/* client types *\/$/;"	g	file:
+__anon0f53a99e070a	dwm.c	/^typedef union {$/;"	u	file:
+__anon0f53a99e0808	dwm.c	/^typedef struct {$/;"	s	file:
+__anon0f53a99e0908	dwm.c	/^typedef struct {$/;"	s	file:
+__anon0f53a99e0a08	dwm.c	/^typedef struct {$/;"	s	file:
+__anon0f53a99e0b08	dwm.c	/^typedef struct {$/;"	s	file:
+__anon0f53a99e0c08	dwm.c	/^typedef struct {$/;"	s	file:
+__anon0f53a99e0d08	dwm.c	/^typedef struct {$/;"	s	file:
+__anon41b17d910108	config.h	/^typedef struct {$/;"	s
+__anon9258968e0108	config.def.h	/^typedef struct {$/;"	s
+a/Makefile	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^--- a\/Makefile$/;"	m
+a/config.def.h	patches/dwm-bar-height-6.2.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	patches/dwm-focusonclick-20200110-61bb8b2.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	patches/dwm-fullgaps-20200508-7b77734.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	patches/dwm-inplacerotate-6.2.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	patches/dwm-keychord-6.2.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	patches/dwm-r1522-viewontag.diff	/^--- a\/config.def.h	Sun Jul 25 09:58:25 2010 +0100$/;"	m
+a/config.def.h	patches/dwm-restartsig-20180523-6.2.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	patches/dwm-scratchpads-20200414-728d397b.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	patches/dwm-status2d-xrdb-6.2.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	patches/dwm-xresources-20210314.diff	/^--- a\/config.def.h$/;"	m
+a/drw.c	patches/dwm-xresources-20210314.diff	/^--- a\/drw.c$/;"	m
+a/drw.h	patches/dwm-xresources-20210314.diff	/^--- a\/drw.h$/;"	m
+a/dwm.1	patches/dwm-fullgaps-20200508-7b77734.diff	/^--- a\/dwm.1$/;"	m
+a/dwm.1	patches/dwm-restartsig-20180523-6.2.diff	/^--- a\/dwm.1$/;"	m
+a/dwm.c	patches/dwm-bar-height-6.2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-focusonclick-20200110-61bb8b2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-fullgaps-20200508-7b77734.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-hide_vacant_tags-6.2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-inplacerotate-6.2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-keychord-6.2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-pertag-perseltag-6.2.diff	/^--- a\/dwm.c	2020-05-23 00:20:34.877944603 +0200$/;"	m
+a/dwm.c	patches/dwm-r1522-viewontag.diff	/^--- a\/dwm.c	Sun Jul 25 09:58:25 2010 +0100$/;"	m
+a/dwm.c	patches/dwm-restartsig-20180523-6.2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-scratchpads-20200414-728d397b.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-status2d-20200508-60bb3df.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-status2d-xrdb-6.2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	patches/dwm-xresources-20210314.diff	/^--- a\/dwm.c$/;"	m
+a/util.c	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^--- a\/util.c$/;"	m
+a/util.h	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^--- a\/util.h$/;"	m
+all	Makefile	/^all: options dwm$/;"	t
+applyrules	dwm.c	/^applyrules(Client *c)$/;"	f	typeref:typename:void
+applysizehints	dwm.c	/^applysizehints(Client *c, int *x, int *y, int *w, int *h, int interact)$/;"	f	typeref:typename:int
+arg	dwm.c	/^	const Arg arg;$/;"	m	struct:__anon0f53a99e0808	typeref:typename:const Arg	file:
+arg	dwm.c	/^	const Arg arg;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:const Arg	file:
+arrange	dwm.c	/^	void (*arrange)(Monitor *);$/;"	m	struct:__anon0f53a99e0b08	typeref:typename:void (*)(Monitor *)	file:
+arrange	dwm.c	/^arrange(Monitor *m)$/;"	f	typeref:typename:void
+arrangemon	dwm.c	/^arrangemon(Monitor *m)$/;"	f	typeref:typename:void
+attach	dwm.c	/^attach(Client *c)$/;"	f	typeref:typename:void
+attachstack	dwm.c	/^attachstack(Client *c)$/;"	f	typeref:typename:void
+b/dwmswallow	patches/dwm-dynamicswallow-20201224-61bb8b2.diff	/^+++ b\/dwmswallow$/;"	n
+b/vanitygaps.c	patches/dwm-cfacts-vanitygaps-6.2_combo.diff	/^+++ b\/vanitygaps.c$/;"	n
+barwin	dwm.c	/^	Window barwin;$/;"	m	struct:Monitor	typeref:typename:Window	file:
+baseh	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
+basew	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
+bh	dwm.c	/^static int bh, blw = 0;      \/* bar geometry *\/$/;"	v	typeref:typename:int	file:
+blw	dwm.c	/^static int bh, blw = 0;      \/* bar geometry *\/$/;"	v	typeref:typename:int	file:
+borderpx	config.def.h	/^static const unsigned int borderpx  = 2;        \/* border pixel of windows *\/$/;"	v	typeref:typename:const unsigned int
+borderpx	config.h	/^static const unsigned int borderpx  = 2;        \/* border pixel of windows *\/$/;"	v	typeref:typename:const unsigned int
+borderpx	dwm.c	/^	unsigned int borderpx;$/;"	m	struct:Monitor	typeref:typename:unsigned int	file:
+broken	dwm.c	/^static const char broken[] = "broken";$/;"	v	typeref:typename:const char[]	file:
+bstack	vanitygaps.c	/^bstack(Monitor *m)$/;"	f	typeref:typename:void	file:
+bstackhoriz	vanitygaps.c	/^bstackhoriz(Monitor *m)$/;"	f	typeref:typename:void	file:
+button	dwm.c	/^	unsigned int button;$/;"	m	struct:__anon0f53a99e0808	typeref:typename:unsigned int	file:
+buttonpress	dwm.c	/^buttonpress(XEvent *e)$/;"	f	typeref:typename:void
+buttons	config.def.h	/^static Button buttons[] = {$/;"	v	typeref:typename:Button[]
+buttons	config.h	/^static Button buttons[] = {$/;"	v	typeref:typename:Button[]
+bw	dwm.c	/^	int bw, oldbw;$/;"	m	struct:Client	typeref:typename:int	file:
+by	dwm.c	/^	int by;               \/* bar geometry *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+centeredfloatingmaster	vanitygaps.c	/^centeredfloatingmaster(Monitor *m)$/;"	f	typeref:typename:void
+centeredmaster	vanitygaps.c	/^centeredmaster(Monitor *m)$/;"	f	typeref:typename:void
+cfact	dwm.c	/^	float cfact;$/;"	m	struct:Client	typeref:typename:float	file:
+checkotherwm	dwm.c	/^checkotherwm(void)$/;"	f	typeref:typename:void
+class	dwm.c	/^	char class[256];$/;"	m	struct:Swallow	typeref:typename:char[256]	file:
+class	dwm.c	/^	const char *class;$/;"	m	struct:__anon0f53a99e0c08	typeref:typename:const char *	file:
+clean	Makefile	/^clean:$/;"	t
+cleanup	dwm.c	/^cleanup(void)$/;"	f	typeref:typename:void
+cleanupmon	dwm.c	/^cleanupmon(Monitor *mon)$/;"	f	typeref:typename:void
+click	dwm.c	/^	unsigned int click;$/;"	m	struct:__anon0f53a99e0808	typeref:typename:unsigned int	file:
+client	dwm.c	/^	Client *client;$/;"	m	struct:Swallow	typeref:typename:Client *	file:
+clientmessage	dwm.c	/^clientmessage(XEvent *e)$/;"	f	typeref:typename:void
+clients	dwm.c	/^	Client *clients;$/;"	m	struct:Monitor	typeref:typename:Client *	file:
+cmd	config.def.h	/^	const void *cmd;$/;"	m	struct:__anon9258968e0108	typeref:typename:const void *
+cmd	config.h	/^	const void *cmd;$/;"	m	struct:__anon41b17d910108	typeref:typename:const void *
+colors	config.def.h	/^static char *colors[][3] = {$/;"	v	typeref:typename:char * [][3]
+colors	config.h	/^static char *colors[][3] = {$/;"	v	typeref:typename:char * [][3]
+config.h	Makefile	/^config.h:$/;"	t
+configure	dwm.c	/^configure(Client *c)$/;"	f	typeref:typename:void
+configurenotify	dwm.c	/^configurenotify(XEvent *e)$/;"	f	typeref:typename:void
+configurerequest	dwm.c	/^configurerequest(XEvent *e)$/;"	f	typeref:typename:void
+createmon	dwm.c	/^createmon(void)$/;"	f	typeref:typename:Monitor *
+currentkey	dwm.c	/^unsigned int currentkey = 0;$/;"	v	typeref:typename:unsigned int
+cursor	drw.h	/^	Cursor cursor;$/;"	m	struct:__anon0f5116480108	typeref:typename:Cursor
+cursor	dwm.c	/^static Cur *cursor[CurLast];$/;"	v	typeref:typename:Cur * []	file:
+curtag	dwm.c	/^	unsigned int curtag, prevtag; \/* current and previous tag *\/$/;"	m	struct:Pertag	typeref:typename:unsigned int	file:
+decay	dwm.c	/^	int decay;$/;"	m	struct:Swallow	typeref:typename:int	file:
+deck	vanitygaps.c	/^deck(Monitor *m)$/;"	f	typeref:typename:void
+defaultgaps	vanitygaps.c	/^defaultgaps(const Arg *arg)$/;"	f	typeref:typename:void
+destroynotify	dwm.c	/^destroynotify(XEvent *e)$/;"	f	typeref:typename:void
+detach	dwm.c	/^detach(Client *c)$/;"	f	typeref:typename:void
+detachstack	dwm.c	/^detachstack(Client *c)$/;"	f	typeref:typename:void
+die	util.c	/^die(const char *fmt, ...) {$/;"	f	typeref:typename:void
+dirtomon	dwm.c	/^dirtomon(int dir)$/;"	f	typeref:typename:Monitor *
+dist	Makefile	/^dist: clean$/;"	t
+dmenucmd	config.def.h	/^static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgco/;"	v	typeref:typename:const char * []
+dmenucmd	config.h	/^static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgco/;"	v	typeref:typename:const char * []
+dmenufont	config.def.h	/^static char dmenufont[]       = "monospace:size=14";$/;"	v	typeref:typename:char[]
+dmenufont	config.h	/^static char dmenufont[]       = "monospace:size=14";$/;"	v	typeref:typename:char[]
+dmenumon	config.def.h	/^static char dmenumon[2] = "0"; \/* component of dmenucmd, manipulated in spawn() *\/$/;"	v	typeref:typename:char[2]
+dmenumon	config.h	/^static char dmenumon[2] = "0"; \/* component of dmenucmd, manipulated in spawn() *\/$/;"	v	typeref:typename:char[2]
+dpy	drw.h	/^	Display *dpy;$/;"	m	struct:Fnt	typeref:typename:Display *
+dpy	drw.h	/^	Display *dpy;$/;"	m	struct:__anon0f5116480308	typeref:typename:Display *
+dpy	dwm.c	/^static Display *dpy;$/;"	v	typeref:typename:Display *	file:
+drawable	drw.h	/^	Drawable drawable;$/;"	m	struct:__anon0f5116480308	typeref:typename:Drawable
+drawbar	dwm.c	/^drawbar(Monitor *m)$/;"	f	typeref:typename:void
+drawbars	dwm.c	/^drawbars(void)$/;"	f	typeref:typename:void
+drawstatusbar	dwm.c	/^drawstatusbar(Monitor *m, int bh, char* stext) {$/;"	f	typeref:typename:int
+drw	dwm.c	/^static Drw *drw;$/;"	v	typeref:typename:Drw *	file:
+drw_clr_create	drw.c	/^drw_clr_create(Drw *drw, Clr *dest, const char *clrname)$/;"	f	typeref:typename:void
+drw_create	drw.c	/^drw_create(Display *dpy, int screen, Window root, unsigned int w, unsigned int h)$/;"	f	typeref:typename:Drw *
+drw_cur_create	drw.c	/^drw_cur_create(Drw *drw, int shape)$/;"	f	typeref:typename:Cur *
+drw_cur_free	drw.c	/^drw_cur_free(Drw *drw, Cur *cursor)$/;"	f	typeref:typename:void
+drw_font_getexts	drw.c	/^drw_font_getexts(Fnt *font, const char *text, unsigned int len, unsigned int *w, unsigned int *h/;"	f	typeref:typename:void
+drw_fontset_create	drw.c	/^drw_fontset_create(Drw* drw, const char *fonts[], size_t fontcount)$/;"	f	typeref:typename:Fnt *
+drw_fontset_free	drw.c	/^drw_fontset_free(Fnt *font)$/;"	f	typeref:typename:void
+drw_fontset_getwidth	drw.c	/^drw_fontset_getwidth(Drw *drw, const char *text)$/;"	f	typeref:typename:unsigned int
+drw_free	drw.c	/^drw_free(Drw *drw)$/;"	f	typeref:typename:void
+drw_map	drw.c	/^drw_map(Drw *drw, Window win, int x, int y, unsigned int w, unsigned int h)$/;"	f	typeref:typename:void
+drw_rect	drw.c	/^drw_rect(Drw *drw, int x, int y, unsigned int w, unsigned int h, int filled, int invert)$/;"	f	typeref:typename:void
+drw_resize	drw.c	/^drw_resize(Drw *drw, unsigned int w, unsigned int h)$/;"	f	typeref:typename:void
+drw_scm_create	drw.c	/^drw_scm_create(Drw *drw, char *clrnames[], size_t clrcount)$/;"	f	typeref:typename:Clr *
+drw_setfontset	drw.c	/^drw_setfontset(Drw *drw, Fnt *set)$/;"	f	typeref:typename:void
+drw_setscheme	drw.c	/^drw_setscheme(Drw *drw, Clr *scm)$/;"	f	typeref:typename:void
+drw_text	drw.c	/^drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h, unsigned int lpad, const char */;"	f	typeref:typename:int
+dst	dwm.c	/^	void *dst;$/;"	m	struct:__anon0f53a99e0d08	typeref:typename:void *	file:
+dwindle	vanitygaps.c	/^dwindle(Monitor *m)$/;"	f	typeref:typename:void
+dwm	Makefile	/^dwm: ${OBJ}$/;"	t
+dwm - dynamic window manager	README.md	/^# dwm - dynamic window manager$/;"	c
+dwm/dwm.c	patches/dwm-alwayscenter-20200625-f04cac6.diff	/^--- dwm\/dwm.c	2020-06-25 00:21:30.383692180 -0300$/;"	m
+ecalloc	util.c	/^ecalloc(size_t nmemb, size_t size)$/;"	f	typeref:typename:void *
+enablegaps	vanitygaps.c	/^static int enablegaps = 1;$/;"	v	typeref:typename:int	file:
+expose	dwm.c	/^expose(XEvent *e)$/;"	f	typeref:typename:void
+f	dwm.c	/^	float f;$/;"	m	union:__anon0f53a99e070a	typeref:typename:float	file:
+fakesignal	dwm.c	/^fakesignal(void)$/;"	f	typeref:typename:int
+fibonacci	vanitygaps.c	/^fibonacci(Monitor *m, int s)$/;"	f	typeref:typename:void
+focus	dwm.c	/^focus(Client *c)$/;"	f	typeref:typename:void
+focusin	dwm.c	/^focusin(XEvent *e)$/;"	f	typeref:typename:void
+focusmon	dwm.c	/^focusmon(const Arg *arg)$/;"	f	typeref:typename:void
+focusonwheel	config.def.h	/^static const int focusonwheel       = 0;$/;"	v	typeref:typename:const int
+focusonwheel	config.h	/^static const int focusonwheel       = 0;$/;"	v	typeref:typename:const int
+focusstack	dwm.c	/^focusstack(const Arg *arg)$/;"	f	typeref:typename:void
+font	config.def.h	/^static char font[]            = "monospace:size=14";$/;"	v	typeref:typename:char[]
+font	config.h	/^static char font[]            = "monospace:size=14";$/;"	v	typeref:typename:char[]
+fonts	config.def.h	/^static const char *fonts[]          = { font, "joypixels:size=10", "Symbols Nerd Font:size=14", /;"	v	typeref:typename:const char * []
+fonts	config.h	/^static const char *fonts[]          = { font, "joypixels:size=10", "Symbols Nerd Font:size=14", /;"	v	typeref:typename:const char * []
+fonts	drw.h	/^	Fnt *fonts;$/;"	m	struct:__anon0f5116480308	typeref:typename:Fnt *
+func	dwm.c	/^	void (*func)(const Arg *);$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:void (*)(const Arg *)	file:
+func	dwm.c	/^	void (*func)(const Arg *arg);$/;"	m	struct:__anon0f53a99e0808	typeref:typename:void (*)(const Arg * arg)	file:
+gaplessgrid	vanitygaps.c	/^gaplessgrid(Monitor *m)$/;"	f	typeref:typename:void
+gappih	config.def.h	/^static const unsigned int gappih    = 10;       \/* horiz inner gap between windows *\/$/;"	v	typeref:typename:const unsigned int
+gappih	config.h	/^static const unsigned int gappih    = 10;       \/* horiz inner gap between windows *\/$/;"	v	typeref:typename:const unsigned int
+gappih	dwm.c	/^	int gappih;           \/* horizontal gap between windows *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+gappiv	config.def.h	/^static const unsigned int gappiv    = 10;       \/* vert inner gap between windows *\/$/;"	v	typeref:typename:const unsigned int
+gappiv	config.h	/^static const unsigned int gappiv    = 10;       \/* vert inner gap between windows *\/$/;"	v	typeref:typename:const unsigned int
+gappiv	dwm.c	/^	int gappiv;           \/* vertical gap between windows *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+gappoh	config.def.h	/^static const unsigned int gappoh    = 10;       \/* horiz outer gap between windows and screen e/;"	v	typeref:typename:const unsigned int
+gappoh	config.h	/^static const unsigned int gappoh    = 10;       \/* horiz outer gap between windows and screen e/;"	v	typeref:typename:const unsigned int
+gappoh	dwm.c	/^	int gappoh;           \/* horizontal outer gaps *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+gappov	config.def.h	/^static const unsigned int gappov    = 10;       \/* vert outer gap between windows and screen ed/;"	v	typeref:typename:const unsigned int
+gappov	config.h	/^static const unsigned int gappov    = 10;       \/* vert outer gap between windows and screen ed/;"	v	typeref:typename:const unsigned int
+gappov	dwm.c	/^	int gappov;           \/* vertical outer gaps *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+gc	drw.h	/^	GC gc;$/;"	m	struct:__anon0f5116480308	typeref:typename:GC
+getatomprop	dwm.c	/^getatomprop(Client *c, Atom prop)$/;"	f	typeref:typename:Atom
+getfacts	vanitygaps.c	/^getfacts(Monitor *m, int msize, int ssize, float *mf, float *sf, int *mr, int *sr)$/;"	f	typeref:typename:void
+getgaps	vanitygaps.c	/^getgaps(Monitor *m, int *oh, int *ov, int *ih, int *iv, unsigned int *nc)$/;"	f	typeref:typename:void
+getrootptr	dwm.c	/^getrootptr(int *x, int *y)$/;"	f	typeref:typename:int
+getstate	dwm.c	/^getstate(Window w)$/;"	f	typeref:typename:long
+gettextprop	dwm.c	/^gettextprop(Window w, Atom atom, char *text, unsigned int size)$/;"	f	typeref:typename:int
+grabbuttons	dwm.c	/^grabbuttons(Client *c, int focused)$/;"	f	typeref:typename:void
+grabkeys	dwm.c	/^grabkeys(void)$/;"	f	typeref:typename:void
+grid	vanitygaps.c	/^grid(Monitor *m)$/;"	f	typeref:typename:void
+h	drw.h	/^	unsigned int h;$/;"	m	struct:Fnt	typeref:typename:unsigned int
+h	drw.h	/^	unsigned int w, h;$/;"	m	struct:__anon0f5116480308	typeref:typename:unsigned int
+h	dwm.c	/^	int x, y, w, h;$/;"	m	struct:Client	typeref:typename:int	file:
+handler	dwm.c	/^static void (*handler[LASTEvent]) (XEvent *) = {$/;"	v	typeref:typename:void (* [LASTEvent])(XEvent *)	file:
+horizgrid	vanitygaps.c	/^horizgrid(Monitor *m) {$/;"	f	typeref:typename:void
+i	dwm.c	/^	int i;$/;"	m	union:__anon0f53a99e070a	typeref:typename:int	file:
+inch	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
+incnmaster	dwm.c	/^incnmaster(const Arg *arg)$/;"	f	typeref:typename:void
+incrgaps	vanitygaps.c	/^incrgaps(const Arg *arg)$/;"	f	typeref:typename:void
+incrigaps	vanitygaps.c	/^incrigaps(const Arg *arg)$/;"	f	typeref:typename:void
+incrihgaps	vanitygaps.c	/^incrihgaps(const Arg *arg)$/;"	f	typeref:typename:void
+incrivgaps	vanitygaps.c	/^incrivgaps(const Arg *arg)$/;"	f	typeref:typename:void
+incrogaps	vanitygaps.c	/^incrogaps(const Arg *arg)$/;"	f	typeref:typename:void
+incrohgaps	vanitygaps.c	/^incrohgaps(const Arg *arg)$/;"	f	typeref:typename:void
+incrovgaps	vanitygaps.c	/^incrovgaps(const Arg *arg)$/;"	f	typeref:typename:void
+incw	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
+insertclient	dwm.c	/^insertclient(Client *item, Client *insertItem, int after) {$/;"	f	typeref:typename:void
+inst	dwm.c	/^	char inst[256];$/;"	m	struct:Swallow	typeref:typename:char[256]	file:
+install	Makefile	/^install: all$/;"	t
+instance	dwm.c	/^	const char *instance;$/;"	m	struct:__anon0f53a99e0c08	typeref:typename:const char *	file:
+isfixed	dwm.c	/^	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;$/;"	m	struct:Client	typeref:typename:int	file:
+isfloating	dwm.c	/^	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;$/;"	m	struct:Client	typeref:typename:int	file:
+isfloating	dwm.c	/^	int isfloating;$/;"	m	struct:__anon0f53a99e0c08	typeref:typename:int	file:
+isfullscreen	dwm.c	/^	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;$/;"	m	struct:Client	typeref:typename:int	file:
+isuniquegeom	dwm.c	/^isuniquegeom(XineramaScreenInfo *unique, size_t n, XineramaScreenInfo *info)$/;"	f	typeref:typename:int	file:
+isurgent	dwm.c	/^	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;$/;"	m	struct:Client	typeref:typename:int	file:
+keychords	config.def.h	/^static Keychord *keychords[] = {$/;"	v	typeref:typename:Keychord * []
+keychords	config.h	/^static Keychord *keychords[] = {$/;"	v	typeref:typename:Keychord * []
+keypress	dwm.c	/^keypress(XEvent *e)$/;"	f	typeref:typename:void
+keys	dwm.c	/^	const Key keys[5];$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:const Key[5]	file:
+keysym	dwm.c	/^	KeySym keysym;$/;"	m	struct:__anon0f53a99e0908	typeref:typename:KeySym	file:
+killclient	dwm.c	/^killclient(const Arg *arg)$/;"	f	typeref:typename:void
+layouts	config.def.h	/^static const Layout layouts[] = {$/;"	v	typeref:typename:const Layout[]
+layouts	config.h	/^static const Layout layouts[] = {$/;"	v	typeref:typename:const Layout[]
+limitexceeded	dwm.c	/^struct NumTags { char limitexceeded[LENGTH(tags) > 31 ? -1 : 1]; };$/;"	m	struct:NumTags	typeref:typename:char[]	file:
+load_xresources	dwm.c	/^load_xresources(void)$/;"	f	typeref:typename:void
+lockfullscreen	config.def.h	/^static const int lockfullscreen = 1; \/* 1 will force focus on the fullscreen window *\/$/;"	v	typeref:typename:const int
+lockfullscreen	config.h	/^static const int lockfullscreen = 1; \/* 1 will force focus on the fullscreen window *\/$/;"	v	typeref:typename:const int
+lrpad	dwm.c	/^static int lrpad;            \/* sum of left and right padding for text *\/$/;"	v	typeref:typename:int	file:
+lt	dwm.c	/^	const Layout *lt[2];$/;"	m	struct:Monitor	typeref:typename:const Layout * [2]	file:
+ltidxs	dwm.c	/^	const Layout *ltidxs[LENGTH(tags) + 1][2]; \/* matrix of tags and layouts indexes  *\/$/;"	m	struct:Pertag	typeref:typename:const Layout * [][2]	file:
+ltsymbol	dwm.c	/^	char ltsymbol[16];$/;"	m	struct:Monitor	typeref:typename:char[16]	file:
+main	dwm.c	/^main(int argc, char *argv[])$/;"	f	typeref:typename:int
+main	transient.c	/^int main(void) {$/;"	f	typeref:typename:int
+manage	dwm.c	/^manage(Window w, XWindowAttributes *wa)$/;"	f	typeref:typename:void
+mappingnotify	dwm.c	/^mappingnotify(XEvent *e)$/;"	f	typeref:typename:void
+maprequest	dwm.c	/^maprequest(XEvent *e)$/;"	f	typeref:typename:void
+mask	dwm.c	/^	unsigned int mask;$/;"	m	struct:__anon0f53a99e0808	typeref:typename:unsigned int	file:
+maxa	dwm.c	/^	float mina, maxa;$/;"	m	struct:Client	typeref:typename:float	file:
+maxh	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
+maxw	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
+mfact	config.def.h	/^static const float mfact     = 0.55; \/* factor of master area size [0.05..0.95] *\/$/;"	v	typeref:typename:const float
+mfact	config.h	/^static const float mfact     = 0.55; \/* factor of master area size [0.05..0.95] *\/$/;"	v	typeref:typename:const float
+mfact	dwm.c	/^	float mfact;$/;"	m	struct:Monitor	typeref:typename:float	file:
+mfacts	dwm.c	/^	float mfacts[LENGTH(tags) + 1]; \/* mfacts per tag *\/$/;"	m	struct:Pertag	typeref:typename:float[]	file:
+mh	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+mina	dwm.c	/^	float mina, maxa;$/;"	m	struct:Client	typeref:typename:float	file:
+minh	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
+minw	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
+mod	dwm.c	/^	unsigned int mod;$/;"	m	struct:__anon0f53a99e0908	typeref:typename:unsigned int	file:
+mon	dwm.c	/^	Monitor *mon;$/;"	m	struct:Client	typeref:typename:Monitor *	file:
+monitor	dwm.c	/^	int monitor;$/;"	m	struct:__anon0f53a99e0c08	typeref:typename:int	file:
+monocle	dwm.c	/^monocle(Monitor *m)$/;"	f	typeref:typename:void
+mons	dwm.c	/^static Monitor *mons, *selmon;$/;"	v	typeref:typename:Monitor *	file:
+movemouse	dwm.c	/^movemouse(const Arg *arg)$/;"	f	typeref:typename:void
+mw	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+mx	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+my	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+n	dwm.c	/^	unsigned int n;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:unsigned int	file:
+name	config.def.h	/^	const char *name;$/;"	m	struct:__anon9258968e0108	typeref:typename:const char *
+name	config.h	/^	const char *name;$/;"	m	struct:__anon41b17d910108	typeref:typename:const char *
+name	dwm.c	/^	char *name;$/;"	m	struct:__anon0f53a99e0d08	typeref:typename:char *	file:
+name	dwm.c	/^	char name[256];$/;"	m	struct:Client	typeref:typename:char[256]	file:
+netatom	dwm.c	/^static Atom wmatom[WMLast], netatom[NetLast];$/;"	v	typeref:typename:Atom[]	file:
+neverfocus	dwm.c	/^	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;$/;"	m	struct:Client	typeref:typename:int	file:
+next	drw.h	/^	struct Fnt *next;$/;"	m	struct:Fnt	typeref:struct:Fnt *
+next	dwm.c	/^	Client *next;$/;"	m	struct:Client	typeref:typename:Client *	file:
+next	dwm.c	/^	Monitor *next;$/;"	m	struct:Monitor	typeref:typename:Monitor *	file:
+next	dwm.c	/^	Swallow *next;$/;"	m	struct:Swallow	typeref:typename:Swallow *	file:
+nexttiled	dwm.c	/^nexttiled(Client *c)$/;"	f	typeref:typename:Client *
+nmaster	config.def.h	/^static const int nmaster     = 1;    \/* number of clients in master area *\/$/;"	v	typeref:typename:const int
+nmaster	config.h	/^static const int nmaster     = 1;    \/* number of clients in master area *\/$/;"	v	typeref:typename:const int
+nmaster	dwm.c	/^	int nmaster;$/;"	m	struct:Monitor	typeref:typename:int	file:
+nmasters	dwm.c	/^	int nmasters[LENGTH(tags) + 1]; \/* number of windows in master area *\/$/;"	m	struct:Pertag	typeref:typename:int[]	file:
+normbgcolor	config.def.h	/^static char normbgcolor[]           = "#222222";$/;"	v	typeref:typename:char[]
+normbgcolor	config.h	/^static char normbgcolor[]           = "#222222";$/;"	v	typeref:typename:char[]
+normbordercolor	config.def.h	/^static char normbordercolor[]       = "#444444";$/;"	v	typeref:typename:char[]
+normbordercolor	config.h	/^static char normbordercolor[]       = "#444444";$/;"	v	typeref:typename:char[]
+normfgcolor	config.def.h	/^static char normfgcolor[]           = "#bbbbbb";$/;"	v	typeref:typename:char[]
+normfgcolor	config.h	/^static char normfgcolor[]           = "#bbbbbb";$/;"	v	typeref:typename:char[]
+nrowgrid	vanitygaps.c	/^nrowgrid(Monitor *m)$/;"	f	typeref:typename:void
+num	dwm.c	/^	int num;$/;"	m	struct:Monitor	typeref:typename:int	file:
+numlockmask	dwm.c	/^static unsigned int numlockmask = 0;$/;"	v	typeref:typename:unsigned int	file:
+oldbw	dwm.c	/^	int bw, oldbw;$/;"	m	struct:Client	typeref:typename:int	file:
+oldh	dwm.c	/^	int oldx, oldy, oldw, oldh;$/;"	m	struct:Client	typeref:typename:int	file:
+oldstate	dwm.c	/^	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;$/;"	m	struct:Client	typeref:typename:int	file:
+oldw	dwm.c	/^	int oldx, oldy, oldw, oldh;$/;"	m	struct:Client	typeref:typename:int	file:
+oldx	dwm.c	/^	int oldx, oldy, oldw, oldh;$/;"	m	struct:Client	typeref:typename:int	file:
+oldy	dwm.c	/^	int oldx, oldy, oldw, oldh;$/;"	m	struct:Client	typeref:typename:int	file:
+options	Makefile	/^options:$/;"	t
+pattern	drw.h	/^	FcPattern *pattern;$/;"	m	struct:Fnt	typeref:typename:FcPattern *
+pertag	dwm.c	/^	Pertag *pertag;$/;"	m	struct:Monitor	typeref:typename:Pertag *	file:
+pop	dwm.c	/^pop(Client *c)$/;"	f	typeref:typename:void
+prevtag	dwm.c	/^	unsigned int curtag, prevtag; \/* current and previous tag *\/$/;"	m	struct:Pertag	typeref:typename:unsigned int	file:
+propertynotify	dwm.c	/^propertynotify(XEvent *e)$/;"	f	typeref:typename:void
+quit	dwm.c	/^quit(const Arg *arg)$/;"	f	typeref:typename:void
+recttomon	dwm.c	/^recttomon(int x, int y, int w, int h)$/;"	f	typeref:typename:Monitor *
+removegaps	vanitygaps.c	/^removegaps(const Arg *arg)$/;"	f	typeref:typename:void
+resize	dwm.c	/^resize(Client *c, int x, int y, int w, int h, int interact)$/;"	f	typeref:typename:void
+resizeclient	dwm.c	/^resizeclient(Client *c, int x, int y, int w, int h)$/;"	f	typeref:typename:void
+resizehints	config.def.h	/^static const int resizehints = 0;    \/* 1 means respect size hints in tiled resizals *\/$/;"	v	typeref:typename:const int
+resizehints	config.h	/^static const int resizehints = 0;    \/* 1 means respect size hints in tiled resizals *\/$/;"	v	typeref:typename:const int
+resizemouse	dwm.c	/^resizemouse(const Arg *arg)$/;"	f	typeref:typename:void
+resource_load	dwm.c	/^resource_load(XrmDatabase db, char *name, enum resource_type rtype, void *dst)$/;"	f	typeref:typename:void
+resource_type	dwm.c	/^enum resource_type {$/;"	g	file:
+resources	config.def.h	/^ResourcePref resources[] = {$/;"	v	typeref:typename:ResourcePref[]
+resources	config.h	/^ResourcePref resources[] = {$/;"	v	typeref:typename:ResourcePref[]
+restack	dwm.c	/^restack(Monitor *m)$/;"	f	typeref:typename:void
+restart	dwm.c	/^static int restart = 0;$/;"	v	typeref:typename:int	file:
+root	drw.h	/^	Window root;$/;"	m	struct:__anon0f5116480308	typeref:typename:Window
+root	dwm.c	/^static Window root, wmcheckwin;$/;"	v	typeref:typename:Window	file:
+rules	config.def.h	/^static const Rule rules[] = {$/;"	v	typeref:typename:const Rule[]
+rules	config.h	/^static const Rule rules[] = {$/;"	v	typeref:typename:const Rule[]
+run	dwm.c	/^run(void)$/;"	f	typeref:typename:void
+running	dwm.c	/^static int running = 1;$/;"	v	typeref:typename:int	file:
+scan	dwm.c	/^scan(void)$/;"	f	typeref:typename:void
+scheme	drw.h	/^	Clr *scheme;$/;"	m	struct:__anon0f5116480308	typeref:typename:Clr *
+scheme	dwm.c	/^static Clr **scheme;$/;"	v	typeref:typename:Clr **	file:
+scratchpads	config.def.h	/^static Sp scratchpads[] = {$/;"	v	typeref:typename:Sp[]
+scratchpads	config.h	/^static Sp scratchpads[] = {$/;"	v	typeref:typename:Sp[]
+screen	drw.h	/^	int screen;$/;"	m	struct:__anon0f5116480308	typeref:typename:int
+screen	dwm.c	/^static int screen;$/;"	v	typeref:typename:int	file:
+sel	dwm.c	/^	Client *sel;$/;"	m	struct:Monitor	typeref:typename:Client *	file:
+selbgcolor	config.def.h	/^static char selbgcolor[]            = "#005577";$/;"	v	typeref:typename:char[]
+selbgcolor	config.h	/^static char selbgcolor[]            = "#005577";$/;"	v	typeref:typename:char[]
+selbordercolor	config.def.h	/^static char selbordercolor[]        = "#005577";$/;"	v	typeref:typename:char[]
+selbordercolor	config.h	/^static char selbordercolor[]        = "#005577";$/;"	v	typeref:typename:char[]
+selfgcolor	config.def.h	/^static char selfgcolor[]            = "#eeeeee";$/;"	v	typeref:typename:char[]
+selfgcolor	config.h	/^static char selfgcolor[]            = "#eeeeee";$/;"	v	typeref:typename:char[]
+sellt	dwm.c	/^	unsigned int sellt;$/;"	m	struct:Monitor	typeref:typename:unsigned int	file:
+sellts	dwm.c	/^	unsigned int sellts[LENGTH(tags) + 1]; \/* selected layouts *\/$/;"	m	struct:Pertag	typeref:typename:unsigned int[]	file:
+selmon	dwm.c	/^static Monitor *mons, *selmon;$/;"	v	typeref:typename:Monitor *	file:
+seltags	dwm.c	/^	unsigned int seltags;$/;"	m	struct:Monitor	typeref:typename:unsigned int	file:
+sendevent	dwm.c	/^sendevent(Client *c, Atom proto)$/;"	f	typeref:typename:int
+sendmon	dwm.c	/^sendmon(Client *c, Monitor *m)$/;"	f	typeref:typename:void
+setborderpx	dwm.c	/^setborderpx(unsigned int bpx)$/;"	f	typeref:typename:void
+setcfact	dwm.c	/^setcfact(const Arg *arg) {$/;"	f	typeref:typename:void
+setclientstate	dwm.c	/^setclientstate(Client *c, long state)$/;"	f	typeref:typename:void
+setfocus	dwm.c	/^setfocus(Client *c)$/;"	f	typeref:typename:void
+setfullscreen	dwm.c	/^setfullscreen(Client *c, int fullscreen)$/;"	f	typeref:typename:void
+setgaps	vanitygaps.c	/^setgaps(int oh, int ov, int ih, int iv)$/;"	f	typeref:typename:void
+setlayout	dwm.c	/^setlayout(const Arg *arg)$/;"	f	typeref:typename:void
+setmfact	dwm.c	/^setmfact(const Arg *arg)$/;"	f	typeref:typename:void
+setup	dwm.c	/^setup(void)$/;"	f	typeref:typename:void
+seturgent	dwm.c	/^seturgent(Client *c, int urg)$/;"	f	typeref:typename:void
+sh	dwm.c	/^static int sw, sh;           \/* X display screen geometry width, height *\/$/;"	v	typeref:typename:int	file:
+showbar	config.def.h	/^static const int showbar            = 1;        \/* 0 means no bar *\/$/;"	v	typeref:typename:const int
+showbar	config.h	/^static const int showbar            = 1;        \/* 0 means no bar *\/$/;"	v	typeref:typename:const int
+showbar	dwm.c	/^	int showbar;$/;"	m	struct:Monitor	typeref:typename:int	file:
+showbars	dwm.c	/^	int showbars[LENGTH(tags) + 1]; \/* display bar for the current tag *\/$/;"	m	struct:Pertag	typeref:typename:int[]	file:
+showhide	dwm.c	/^showhide(Client *c)$/;"	f	typeref:typename:void
+sigchld	dwm.c	/^sigchld(int unused)$/;"	f	typeref:typename:void
+sighup	dwm.c	/^sighup(int unused)$/;"	f	typeref:typename:void
+sigterm	dwm.c	/^sigterm(int unused)$/;"	f	typeref:typename:void
+smartgaps	config.def.h	/^static       int smartgaps          = 0;        \/* 1 means no outer gap when there is only one /;"	v	typeref:typename:int
+smartgaps	config.h	/^static       int smartgaps          = 0;        \/* 1 means no outer gap when there is only one /;"	v	typeref:typename:int
+snap	config.def.h	/^static const unsigned int snap      = 32;       \/* snap pixel *\/$/;"	v	typeref:typename:const unsigned int
+snap	config.h	/^static const unsigned int snap      = 32;       \/* snap pixel *\/$/;"	v	typeref:typename:const unsigned int
+snext	dwm.c	/^	Client *snext;$/;"	m	struct:Client	typeref:typename:Client *	file:
+spawn	dwm.c	/^spawn(const Arg *arg)$/;"	f	typeref:typename:void
+spcmd1	config.def.h	/^const char *spcmd1[] = { "st", "-g", "120x30", "-n", "mixer", "-e", "pulsemixer", NULL };$/;"	v	typeref:typename:const char * []
+spcmd1	config.h	/^const char *spcmd1[] = { "st", "-g", "120x30", "-n", "mixer", "-e", "pulsemixer", NULL };$/;"	v	typeref:typename:const char * []
+spcmd2	config.def.h	/^const char *spcmd2[] = { "st", "-g", "120x40", "-n", "scratch", NULL };$/;"	v	typeref:typename:const char * []
+spcmd2	config.h	/^const char *spcmd2[] = { "st", "-g", "120x40", "-n", "scratch", NULL };$/;"	v	typeref:typename:const char * []
+spiral	vanitygaps.c	/^spiral(Monitor *m)$/;"	f	typeref:typename:void
+split	util.c	/^split(char *s, const char* sep, char **pbegin, size_t maxcount) {$/;"	f	typeref:typename:size_t
+stack	dwm.c	/^	Client *stack;$/;"	m	struct:Monitor	typeref:typename:Client *	file:
+stext	dwm.c	/^static char stext[1024];$/;"	v	typeref:typename:char[1024]	file:
+sw	dwm.c	/^static int sw, sh;           \/* X display screen geometry width, height *\/$/;"	v	typeref:typename:int	file:
+swal	dwm.c	/^swal(Client *swer, Client *swee, int manage)$/;"	f	typeref:typename:void
+swaladdpool	dwm.c	/^swaladdpool(Client *c, const char *class, const char *inst, const char *title)$/;"	f	typeref:typename:void
+swaldecay	config.def.h	/^static const int swaldecay = 3;$/;"	v	typeref:typename:const int
+swaldecay	config.h	/^static const int swaldecay = 3;$/;"	v	typeref:typename:const int
+swaldecayby	dwm.c	/^swaldecayby(int decayby)$/;"	f	typeref:typename:void
+swallowedby	dwm.c	/^	Client *swallowedby;$/;"	m	struct:Client	typeref:typename:Client *	file:
+swallows	dwm.c	/^static Swallow *swallows;$/;"	v	typeref:typename:Swallow *	file:
+swalmanage	dwm.c	/^swalmanage(Swallow *s, Window w, XWindowAttributes *wa)$/;"	f	typeref:typename:void
+swalmatch	dwm.c	/^swalmatch(Window w)$/;"	f	typeref:typename:Swallow *
+swalmouse	dwm.c	/^swalmouse(const Arg *arg)$/;"	f	typeref:typename:void
+swalretroactive	config.def.h	/^static const int swalretroactive = 1;$/;"	v	typeref:typename:const int
+swalretroactive	config.h	/^static const int swalretroactive = 1;$/;"	v	typeref:typename:const int
+swalrmpool	dwm.c	/^swalrmpool(Swallow *s)$/;"	f	typeref:typename:void
+swalrmpoolbyclient	dwm.c	/^swalrmpoolbyclient(Client *c)$/;"	f	typeref:typename:void
+swalstop	dwm.c	/^swalstop(Client *swee, Client *root)$/;"	f	typeref:typename:void
+swalstopsel	dwm.c	/^swalstopsel(const Arg *unused)$/;"	f	typeref:typename:void
+swalsymbol	config.def.h	/^static const char swalsymbol[] = "👅";$/;"	v	typeref:typename:const char[]
+swalsymbol	config.h	/^static const char swalsymbol[] = "👅";$/;"	v	typeref:typename:const char[]
+symbol	dwm.c	/^	const char *symbol;$/;"	m	struct:__anon0f53a99e0b08	typeref:typename:const char *	file:
+tag	dwm.c	/^tag(const Arg *arg)$/;"	f	typeref:typename:void
+tagmon	dwm.c	/^tagmon(const Arg *arg)$/;"	f	typeref:typename:void
+tags	config.def.h	/^static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };$/;"	v	typeref:typename:const char * []
+tags	config.h	/^static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };$/;"	v	typeref:typename:const char * []
+tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:Client	typeref:typename:unsigned int	file:
+tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:__anon0f53a99e0c08	typeref:typename:unsigned int	file:
+tagset	dwm.c	/^	unsigned int tagset[2];$/;"	m	struct:Monitor	typeref:typename:unsigned int[2]	file:
+termcmd	config.def.h	/^static const char *termcmd[]  = { "st", NULL };$/;"	v	typeref:typename:const char * []
+termcmd	config.h	/^static const char *termcmd[]  = { "st", NULL };$/;"	v	typeref:typename:const char * []
+termcol0	config.def.h	/^static char termcol0[] = "#000000"; \/* black   *\/$/;"	v	typeref:typename:char[]
+termcol0	config.h	/^static char termcol0[] = "#000000"; \/* black   *\/$/;"	v	typeref:typename:char[]
+termcol1	config.def.h	/^static char termcol1[] = "#ff0000"; \/* red     *\/$/;"	v	typeref:typename:char[]
+termcol1	config.h	/^static char termcol1[] = "#ff0000"; \/* red     *\/$/;"	v	typeref:typename:char[]
+termcol10	config.def.h	/^static char termcol10[] = "#33ff00"; \/* green   *\/$/;"	v	typeref:typename:char[]
+termcol10	config.h	/^static char termcol10[] = "#33ff00"; \/* green   *\/$/;"	v	typeref:typename:char[]
+termcol11	config.def.h	/^static char termcol11[] = "#ff0099"; \/* yellow  *\/$/;"	v	typeref:typename:char[]
+termcol11	config.h	/^static char termcol11[] = "#ff0099"; \/* yellow  *\/$/;"	v	typeref:typename:char[]
+termcol12	config.def.h	/^static char termcol12[] = "#0066ff"; \/* blue    *\/$/;"	v	typeref:typename:char[]
+termcol12	config.h	/^static char termcol12[] = "#0066ff"; \/* blue    *\/$/;"	v	typeref:typename:char[]
+termcol13	config.def.h	/^static char termcol13[] = "#cc00ff"; \/* magenta *\/$/;"	v	typeref:typename:char[]
+termcol13	config.h	/^static char termcol13[] = "#cc00ff"; \/* magenta *\/$/;"	v	typeref:typename:char[]
+termcol14	config.def.h	/^static char termcol14[] = "#00ffff"; \/* cyan    *\/$/;"	v	typeref:typename:char[]
+termcol14	config.h	/^static char termcol14[] = "#00ffff"; \/* cyan    *\/$/;"	v	typeref:typename:char[]
+termcol15	config.def.h	/^static char termcol15[] = "#ffffff"; \/* white   *\/$/;"	v	typeref:typename:char[]
+termcol15	config.h	/^static char termcol15[] = "#ffffff"; \/* white   *\/$/;"	v	typeref:typename:char[]
+termcol2	config.def.h	/^static char termcol2[] = "#33ff00"; \/* green   *\/$/;"	v	typeref:typename:char[]
+termcol2	config.h	/^static char termcol2[] = "#33ff00"; \/* green   *\/$/;"	v	typeref:typename:char[]
+termcol3	config.def.h	/^static char termcol3[] = "#ff0099"; \/* yellow  *\/$/;"	v	typeref:typename:char[]
+termcol3	config.h	/^static char termcol3[] = "#ff0099"; \/* yellow  *\/$/;"	v	typeref:typename:char[]
+termcol4	config.def.h	/^static char termcol4[] = "#0066ff"; \/* blue    *\/$/;"	v	typeref:typename:char[]
+termcol4	config.h	/^static char termcol4[] = "#0066ff"; \/* blue    *\/$/;"	v	typeref:typename:char[]
+termcol5	config.def.h	/^static char termcol5[] = "#cc00ff"; \/* magenta *\/$/;"	v	typeref:typename:char[]
+termcol5	config.h	/^static char termcol5[] = "#cc00ff"; \/* magenta *\/$/;"	v	typeref:typename:char[]
+termcol6	config.def.h	/^static char termcol6[] = "#00ffff"; \/* cyan    *\/$/;"	v	typeref:typename:char[]
+termcol6	config.h	/^static char termcol6[] = "#00ffff"; \/* cyan    *\/$/;"	v	typeref:typename:char[]
+termcol7	config.def.h	/^static char termcol7[] = "#d0d0d0"; \/* white   *\/$/;"	v	typeref:typename:char[]
+termcol7	config.h	/^static char termcol7[] = "#d0d0d0"; \/* white   *\/$/;"	v	typeref:typename:char[]
+termcol8	config.def.h	/^static char termcol8[]  = "#808080"; \/* black   *\/$/;"	v	typeref:typename:char[]
+termcol8	config.h	/^static char termcol8[]  = "#808080"; \/* black   *\/$/;"	v	typeref:typename:char[]
+termcol9	config.def.h	/^static char termcol9[]  = "#ff0000"; \/* red     *\/$/;"	v	typeref:typename:char[]
+termcol9	config.h	/^static char termcol9[]  = "#ff0000"; \/* red     *\/$/;"	v	typeref:typename:char[]
+termcolor	config.def.h	/^static char *termcolor[] = {$/;"	v	typeref:typename:char * []
+termcolor	config.h	/^static char *termcolor[] = {$/;"	v	typeref:typename:char * []
+tile	vanitygaps.c	/^tile(Monitor *m)$/;"	f	typeref:typename:void	file:
+title	dwm.c	/^	char title[256];$/;"	m	struct:Swallow	typeref:typename:char[256]	file:
+title	dwm.c	/^	const char *title;$/;"	m	struct:__anon0f53a99e0c08	typeref:typename:const char *	file:
+togglebar	dwm.c	/^togglebar(const Arg *arg)$/;"	f	typeref:typename:void
+togglefloating	dwm.c	/^togglefloating(const Arg *arg)$/;"	f	typeref:typename:void
+togglegaps	vanitygaps.c	/^togglegaps(const Arg *arg)$/;"	f	typeref:typename:void
+togglescratch	dwm.c	/^togglescratch(const Arg *arg)$/;"	f	typeref:typename:void
+toggletag	dwm.c	/^toggletag(const Arg *arg)$/;"	f	typeref:typename:void
+toggleview	dwm.c	/^toggleview(const Arg *arg)$/;"	f	typeref:typename:void
+topbar	config.def.h	/^static const int topbar             = 0;        \/* 0 means bottom bar *\/$/;"	v	typeref:typename:const int
+topbar	config.h	/^static const int topbar             = 0;        \/* 0 means bottom bar *\/$/;"	v	typeref:typename:const int
+topbar	dwm.c	/^	int topbar;$/;"	m	struct:Monitor	typeref:typename:int	file:
+type	dwm.c	/^	enum resource_type type;$/;"	m	struct:__anon0f53a99e0d08	typeref:enum:resource_type	file:
+ui	dwm.c	/^	unsigned int ui;$/;"	m	union:__anon0f53a99e070a	typeref:typename:unsigned int	file:
+unfocus	dwm.c	/^unfocus(Client *c, int setfocus)$/;"	f	typeref:typename:void
+uninstall	Makefile	/^uninstall:$/;"	t
+unmanage	dwm.c	/^unmanage(Client *c, int destroyed)$/;"	f	typeref:typename:void
+unmapnotify	dwm.c	/^unmapnotify(XEvent *e)$/;"	f	typeref:typename:void
+updatebarpos	dwm.c	/^updatebarpos(Monitor *m)$/;"	f	typeref:typename:void
+updatebars	dwm.c	/^updatebars(void)$/;"	f	typeref:typename:void
+updateclientlist	dwm.c	/^updateclientlist()$/;"	f	typeref:typename:void
+updategeom	dwm.c	/^updategeom(void)$/;"	f	typeref:typename:int
+updatenumlockmask	dwm.c	/^updatenumlockmask(void)$/;"	f	typeref:typename:void
+updatesizehints	dwm.c	/^updatesizehints(Client *c)$/;"	f	typeref:typename:void
+updatestatus	dwm.c	/^updatestatus(void)$/;"	f	typeref:typename:void
+updatetitle	dwm.c	/^updatetitle(Client *c)$/;"	f	typeref:typename:void
+updatewindowtype	dwm.c	/^updatewindowtype(Client *c)$/;"	f	typeref:typename:void
+updatewmhints	dwm.c	/^updatewmhints(Client *c)$/;"	f	typeref:typename:void
+usage	dwmswallow	/^usage() {$/;"	f
+user_bh	config.def.h	/^static const int user_bh            = 30;        \/* 0 means that dwm will calculate bar height,/;"	v	typeref:typename:const int
+user_bh	config.h	/^static const int user_bh            = 30;        \/* 0 means that dwm will calculate bar height,/;"	v	typeref:typename:const int
+utf8decode	drw.c	/^utf8decode(const char *c, long *u, size_t clen)$/;"	f	typeref:typename:size_t	file:
+utf8decodebyte	drw.c	/^utf8decodebyte(const char c, size_t *i)$/;"	f	typeref:typename:long	file:
+utf8validate	drw.c	/^utf8validate(long *u, size_t i)$/;"	f	typeref:typename:size_t	file:
+utfbyte	drw.c	/^static const unsigned char utfbyte[UTF_SIZ + 1] = {0x80,    0, 0xC0, 0xE0, 0xF0};$/;"	v	typeref:typename:const unsigned char[]	file:
+utfmask	drw.c	/^static const unsigned char utfmask[UTF_SIZ + 1] = {0xC0, 0x80, 0xE0, 0xF0, 0xF8};$/;"	v	typeref:typename:const unsigned char[]	file:
+utfmax	drw.c	/^static const long utfmax[UTF_SIZ + 1] = {0x10FFFF, 0x7F, 0x7FF, 0xFFFF, 0x10FFFF};$/;"	v	typeref:typename:const long[]	file:
+utfmin	drw.c	/^static const long utfmin[UTF_SIZ + 1] = {       0,    0,  0x80,  0x800,  0x10000};$/;"	v	typeref:typename:const long[]	file:
+v	dwm.c	/^	const void *v;$/;"	m	union:__anon0f53a99e070a	typeref:typename:const void *	file:
+view	dwm.c	/^view(const Arg *arg)$/;"	f	typeref:typename:void
+viewontag	config.def.h	/^static const int viewontag         = 1;     \/* Switch view on tag switch *\/$/;"	v	typeref:typename:const int
+viewontag	config.h	/^static const int viewontag         = 1;     \/* Switch view on tag switch *\/$/;"	v	typeref:typename:const int
+w	drw.h	/^	unsigned int w, h;$/;"	m	struct:__anon0f5116480308	typeref:typename:unsigned int
+w	dwm.c	/^	int x, y, w, h;$/;"	m	struct:Client	typeref:typename:int	file:
+wh	dwm.c	/^	int wx, wy, ww, wh;   \/* window area  *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+win	dwm.c	/^	Window win;$/;"	m	struct:Client	typeref:typename:Window	file:
+wintoclient	dwm.c	/^wintoclient(Window w)$/;"	f	typeref:typename:Client *
+wintoclient2	dwm.c	/^wintoclient2(Window w, Client **pc, Client **proot)$/;"	f	typeref:typename:int
+wintomon	dwm.c	/^wintomon(Window w)$/;"	f	typeref:typename:Monitor *
+wmatom	dwm.c	/^static Atom wmatom[WMLast], netatom[NetLast];$/;"	v	typeref:typename:Atom[]	file:
+wmcheckwin	dwm.c	/^static Window root, wmcheckwin;$/;"	v	typeref:typename:Window	file:
+ww	dwm.c	/^	int wx, wy, ww, wh;   \/* window area  *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+wx	dwm.c	/^	int wx, wy, ww, wh;   \/* window area  *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+wy	dwm.c	/^	int wx, wy, ww, wh;   \/* window area  *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+x	dwm.c	/^	int x, y, w, h;$/;"	m	struct:Client	typeref:typename:int	file:
+xerror	dwm.c	/^xerror(Display *dpy, XErrorEvent *ee)$/;"	f	typeref:typename:int
+xerrordummy	dwm.c	/^xerrordummy(Display *dpy, XErrorEvent *ee)$/;"	f	typeref:typename:int
+xerrorstart	dwm.c	/^xerrorstart(Display *dpy, XErrorEvent *ee)$/;"	f	typeref:typename:int
+xerrorxlib	dwm.c	/^static int (*xerrorxlib)(Display *, XErrorEvent *);$/;"	v	typeref:typename:int (*)(Display *,XErrorEvent *)	file:
+xfont	drw.h	/^	XftFont *xfont;$/;"	m	struct:Fnt	typeref:typename:XftFont *
+xfont_create	drw.c	/^xfont_create(Drw *drw, const char *fontname, FcPattern *fontpattern)$/;"	f	typeref:typename:Fnt *	file:
+xfont_free	drw.c	/^xfont_free(Fnt *font)$/;"	f	typeref:typename:void	file:
+xrdb	dwm.c	/^xrdb(const Arg *arg)$/;"	f	typeref:typename:void
+y	dwm.c	/^	int x, y, w, h;$/;"	m	struct:Client	typeref:typename:int	file:
+zoom	dwm.c	/^zoom(const Arg *arg)$/;"	f	typeref:typename:void

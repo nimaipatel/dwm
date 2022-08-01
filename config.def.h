@@ -195,6 +195,7 @@ static Keychord *keychords[] = {
 	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_t }},                               setlayout,             {.v = &layouts[0]} }),
 	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_f }},                               setlayout,             {.v = &layouts[1]} }),
 	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_m }},                               setlayout,             {.v = &layouts[2]} }),
+	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_b }},                               setlayout,             {.v = &layouts[5]} }),
 	&((Keychord){2, {{ MODKEY, XK_space }, { MODKEY, XK_space }},                          setlayout,             {0} }),
 
 	/* floating windows */
