@@ -4,19 +4,19 @@
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 0;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 0;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 0;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 0;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const int user_bh            = 30;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int focusonwheel       = 0;
 static const int viewontag         = 1;     /* Switch view on tag switch */
-static char font[]            = "monospace:size=14";
-static char dmenufont[]       = "monospace:size=14";
-static const char *fonts[]          = { font, "joypixels:size=10", "Symbols Nerd Font:size=14",  };
+static char font[]            = "monospace:size=16";
+static char dmenufont[]       = "monospace:size=16";
+static const char *fonts[]          = { font, "Noto Sans Gujarati:size=16", "Noto Color Emoji:size=16", "Symbols Nerd Font:size=16",  };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -76,16 +76,29 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = {"૧", "૨", "૩", "૪", "૫", "૬", "૭", "૮", "૯"};
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class        instance      title        tags mask     isfloating   monitor */
-	{ "Gimp",       NULL,         NULL,        0,            1,           -1 },
+	/*browsers on tag "2"*/
+	{ "Vieb",       NULL,         NULL,        1 << 1,       0,           -1 },
+	{ "Chromium",   NULL,         NULL,        1 << 1,       0,           -1 },
+	{ "Brave-browser",NULL,       NULL,        1 << 1,       0,           -1 },
+
+	/*office suite on tag "3"*/
+	{ "Soffice",    NULL,         NULL,        1 << 2,       0,           -1 },
+	{ "libreoffice-writer",    NULL,         NULL,        1 << 2,       0,           -1 },
+	{ "libreoffice-calc",    NULL,         NULL,        1 << 2,       0,           -1 },
+	{ "libreoffice-impress",    NULL,         NULL,        1 << 2,       0,           -1 },
+
+	/*always floating*/
 	{ "scrcpy",     NULL,         NULL,        0,            1,           -1 },
 	{ "fzfmenu",    NULL,         NULL,        0,            1,           -1 },
+
+	/*scratchpads*/
 	{ NULL,         "mixer",      NULL,        SPTAG(0),     1,           -1 },
 	{ NULL,         "scratch",    NULL,        SPTAG(1),     1,           -1 },
 };
@@ -143,11 +156,23 @@ static Keychord *keychords[] = {
 	/* spawn new terminal */
 	&((Keychord){1, {{ MODKEY, XK_Return }},                                               spawn,                 SHCMD("st -e tmux") }),
 
-	/* spawn new browser session */
+#define VIEB
+
+#ifdef CHROMIUM
 	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_b }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=clean") }),
-	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_m }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=google-main") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_g }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=google-main") }),
 	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_a }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=google-alt") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_m }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=microsoft") }),
 	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_n }},                                  spawn,                 SHCMD("$BROWSER --incognito") }),
+#endif
+
+#ifdef VIEB
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_b }},                                  spawn,                 SHCMD("vieb") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_g }},                                  spawn,                 SHCMD("vieb --datafolder=~/.config/ViebGoogleMain") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_a }},                                  spawn,                 SHCMD("vieb --datafolder=~/.config/ViebGoogleAlt") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_m }},                                  spawn,                 SHCMD("vieb --datafolder=~/.config/ViebMicrosoft") }),
+	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_n }},                                  spawn,                 SHCMD("vieb --datafolder=~/.config/ViebIncognito") }),
+#endif
 
 	&((Keychord){2, {{ MODKEY, XK_w }, { MODKEY, XK_w }},                                  spawn,                 SHCMD("lowriter --nologo") }),
 	&((Keychord){2, {{ MODKEY, XK_w }, { MODKEY, XK_e }},                                  spawn,                 SHCMD("localc --nologo") }),
@@ -221,7 +246,7 @@ static Keychord *keychords[] = {
 	&((Keychord){1, {{ MODKEY, XK_s }},                                                    spawn,                 SHCMD("browser-search") }),
 
 	/* screenlock */
-	&((Keychord){1, {{ MODKEY, XK_q }},                                                    spawn,                 SHCMD("lockscreen") }),
+	&((Keychord){1, {{ MODKEY, XK_q }},                                                    spawn,                 SHCMD("slock") }),
 
 	/* get options for reboot, shutdown, et cetera*/
 	&((Keychord){1, {{ MODKEY|ShiftMask, XK_x }},                                          spawn,                 SHCMD("sys-options") }),
