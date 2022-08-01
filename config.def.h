@@ -96,13 +96,11 @@ static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
-#include "grid.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
-	{ "HHH",      grid },
 	{ "TTT",      bstack },
 	{ "===",      bstackhoriz },
 };
@@ -188,8 +186,6 @@ static Keychord *keychords[] = {
 	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_t }},                               setlayout,             {.v = &layouts[0]} }),
 	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_f }},                               setlayout,             {.v = &layouts[1]} }),
 	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_m }},                               setlayout,             {.v = &layouts[2]} }),
-	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_g }},                               setlayout,             {.v = &layouts[3]} }),
-	&((Keychord){2, {{ MODKEY, XK_space}, { MODKEY, XK_b }},                               setlayout,             {.v = &layouts[4]} }),
 	&((Keychord){2, {{ MODKEY, XK_space }, { MODKEY, XK_space }},                          setlayout,             {0} }),
 
 	/* floating windows */
