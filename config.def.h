@@ -247,8 +247,8 @@ static Keychord *keychords[] = {
 
 	/* brightness controls */
 	&((Keychord){1, {{ MODKEY, XK_c }},                                                    spawn,                 SHCMD("clight-recalib") }),
-	&((Keychord){1, {{ 0, XF86XK_MonBrightnessUp }},                                       spawn,                 SHCMD("brightnessctl set +1% ; pkill -RTMIN+19 dwmblocks") }),
-	&((Keychord){1, {{ 0, XF86XK_MonBrightnessDown }},                                     spawn,                 SHCMD("brightnessctl set 1%- ; pkill -RTMIN+19 dwmblocks") }),
+	&((Keychord){1, {{ 0, XF86XK_MonBrightnessUp }},                                       spawn,                 SHCMD("brightnessctl set +1% ; pkill -RTMIN+1 dwmblocks") }),
+	&((Keychord){1, {{ 0, XF86XK_MonBrightnessDown }},                                     spawn,                 SHCMD("brightnessctl set 1%- ; pkill -RTMIN+1 dwmblocks") }),
 
 	/* audio/volume controls */
 	&((Keychord){1, {{ 0, XF86XK_AudioMute }},                                             spawn,                 SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") }),
