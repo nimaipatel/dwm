@@ -140,7 +140,7 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Keychord *keychords[] = {
 	/* spawn new terminal */
-	&((Keychord){1, {{ MODKEY, XK_Return }},                                               spawn,                 SHCMD("$TERMINAL") }),
+	&((Keychord){1, {{ MODKEY, XK_Return }},                                               spawn,                 SHCMD("st -e tmux") }),
 
 	/* spawn new browser session */
 	&((Keychord){2, {{ MODKEY, XK_b }, { MODKEY, XK_b }},                                  spawn,                 SHCMD("$BROWSER --profile-directory=clean") }),
