@@ -85,6 +85,7 @@ static const Rule rules[] = {
 	/* class        instance      title        tags mask     isfloating   monitor */
 	{ "Gimp",       NULL,         NULL,        0,            1,           -1 },
 	{ "scrcpy",     NULL,         NULL,        0,            1,           -1 },
+	{ "fzfmenu",    NULL,         NULL,        0,            1,           -1 },
 	{ NULL,         "mixer",      NULL,        SPTAG(0),     1,           -1 },
 	{ NULL,         "scratch",    NULL,        SPTAG(1),     1,           -1 },
 };

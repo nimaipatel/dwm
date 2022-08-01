@@ -1397,12 +1397,8 @@ manage(Window w, XWindowAttributes *wa)
 	updatewmhints(c);
 	XSelectInput(dpy, w, EnterWindowMask|FocusChangeMask|PropertyChangeMask|StructureNotifyMask);
 	grabbuttons(c, 0);
-	if (strcmp(c->name, "fzfmenu") == 0) {
-		// settings for fzfmenu window
-	} else {
-		c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) / 2;
-		c->x = c->mon->mx + (c->mon->mw - WIDTH(c)) / 2;
-	}
+	c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) / 2;
+	c->x = c->mon->mx + (c->mon->mw - WIDTH(c)) / 2;
 	if (!c->isfloating)
 		c->isfloating = c->oldstate = trans != None || c->isfixed;
 	if (c->isfloating)
