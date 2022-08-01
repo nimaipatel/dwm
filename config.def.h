@@ -101,8 +101,6 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
-	{ "TTT",      bstack },
-	{ "===",      bstackhoriz },
 };
 
 /* key definitions */
@@ -198,13 +196,18 @@ static Keychord *keychords[] = {
 	&((Keychord){1, {{ MODKEY|ShiftMask, XK_period }},                                     tagmon,                {.i = +1 } }),
 
 	/* program launcher */
-	&((Keychord){1, {{ MODKEY, XK_d }},                                                    spawn,                 SHCMD("dmenu_run") }),
+	&((Keychord){1, {{ MODKEY, XK_d }},                                                    spawn,                 SHCMD("fzf-launcher") }),
 
 	/* password */
 	&((Keychord){1, {{ MODKEY, XK_p }},                                                    spawn,                 SHCMD("passmenu -p 'Select Password'") }),
 	
 	/* search for unicode characters */
 	&((Keychord){1, {{ MODKEY, XK_u }},                                                    spawn,                 SHCMD("unicode-selector") }),
+
+	&((Keychord){1, {{ MODKEY, XK_e }},                                                    spawn,                 SHCMD("st -e tmux new-session -As def") }),
+
+	/* search some websites for a term */
+	&((Keychord){1, {{ MODKEY, XK_s }},                                                    spawn,                 SHCMD("browser-search") }),
 
 	/* screenlock */
 	&((Keychord){1, {{ MODKEY, XK_q }},                                                    spawn,                 SHCMD("lockscreen") }),
